@@ -208,3 +208,6 @@ __marimo__/
 
 # Deploy Scripts
 deploy_portfolio_site.sh
+
+# Files That Do Not Need to be Committed
+.DS_Store

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>お問い合わせ | 青木直之 (na0AaooQ) のポートフォリオサイト</title>
+  <meta
+    name="description"
+    content="ポートフォリオサイトや掲載プロダクトに関するお問い合わせはこちらからご連絡いただけます。必要事項をご入力のうえ送信してください。"
+  >
+  <link
+    rel="canonical"
+    href="https://portfolio.na0aaooq.com/contact.html"
+  >
+
+  <!-- ===== Favicon ===== -->
+  <link
+    rel="icon"
+    href="assets/img/common/favicon.svg"
+    type="image/svg+xml"
+  >
+  <link
+    rel="alternate icon"
+    href="assets/img/common/favicon.png"
+    type="image/png"
+  >
+  <link
+    rel="apple-touch-icon"
+    href="assets/img/common/favicon.png"
+  >
+
+  <!-- ===== OGP ===== -->
+  <meta
+    property="og:title"
+    content="お問い合わせ | 青木直之 (na0AaooQ) のポートフォリオサイト"
+  >
+  <meta
+    property="og:description"
+    content="ポートフォリオサイトや掲載プロダクトに関するお問い合わせはこちらからご連絡いただけます。必要事項をご入力のうえ送信してください。"
+  >
+  <meta property="og:type" content="website">
+  <meta
+    property="og:url"
+    content="https://portfolio.na0aaooq.com/contact.html"
+  >
+  <meta
+    property="og:site_name"
+    content="青木直之 (na0AaooQ) のポートフォリオサイト"
+  >
+  <meta
+    property="og:image"
+    content="https://portfolio.na0aaooq.com/assets/img/common/ogp-image.png"
+  >
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@na0AaooQ">
+  <meta
+    name="twitter:title"
+    content="お問い合わせ | 青木直之 (na0AaooQ) のポートフォリオサイト"
+  >
+  <meta
+    name="twitter:description"
+    content="ポートフォリオサイトや掲載プロダクトに関するお問い合わせはこちらからご連絡いただけます。必要事項をご入力のうえ送信してください。"
+  >
+  <meta
+    name="twitter:image"
+    content="https://portfolio.na0aaooq.com/assets/img/common/ogp-image.png"
+  >
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6018MG4PQ9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6018MG4PQ9');
+</script>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="site-logo" aria-label="トップページへ">
+        青木直之 (na0AaooQ) ポートフォリオサイト
+      </a>
+
+      <button
+        type="button"
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        aria-label="メニューを開く"
+      >
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+      </button>
+
+      <nav class="global-nav" aria-label="グローバルナビゲーション">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="products.html">プロダクト一覧</a>
+          </li>
+          <li class="nav-item">
+            <a href="news.html">お知らせ</a>
+          </li>
+          <li class="nav-item lang-switcher">
+            <a href="en/contact.html" lang="en">English</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <nav
+      id="mobile-nav"
+      class="mobile-nav"
+      aria-label="モバイルナビゲーション"
+      hidden
+    >
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item">
+          <a href="products.html">プロダクト一覧</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="news.html">お知らせ</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="en/contact.html" lang="en">English</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 
+    ページ全体のローディングアニメーション用のオーバーレイ
+  -->
+  <div
+    id="loading-overlay"
+    class="loading-overlay"
+    aria-hidden="true"
+    hidden
+  >
+    <div class="loading-overlay__content" role="status" aria-live="polite">
+      <div class="loading-spinner" aria-hidden="true"></div>
+      <p class="loading-text">送信中です。しばらくお待ちください…</p>
+    </div>
+  </div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero-inner">
+        <p class="page-hero-label">Contact</p>
+        <h1 class="page-title">お問い合わせ</h1>
+        <p class="page-lead">
+          サイトやプロダクトに関するご質問、ご連絡はこちらからお送りいただけます。
+        </p>
+      </div>
+    </section>
+
+    <section class="contact-intro-section">
+      <div class="container section-inner">
+        <div class="contact-intro card">
+          <h2>ご連絡の前に</h2>
+          <p>
+            お問い合わせ内容を確認のうえ、必要に応じて返信いたします。
+            内容によっては、回答までお時間をいただく場合や、返信を控えさせていただく場合があります。
+          </p>
+          <p>
+            また、当フォームではスパム・Bot対策のため Google reCAPTCHA を利用予定です。
+          </p>
+          <p>
+            個人情報の取り扱いについては、
+            <a href="privacy.html" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>をご確認ください。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-form-section">
+      <div class="container section-inner">
+        <div class="section-heading">
+          <h2>お問い合わせフォーム</h2>
+          <p>
+            必要事項をご入力のうえ、送信してください。
+          </p>
+        </div>
+
+        <form class="contact-form card" id="contact-form" action="#" method="post" novalidate>
+          <div class="form-group">
+            <label for="name">お名前 / ハンドルネーム <span class="required">必須</span></label>
+            <input type="text" id="name" name="name" autocomplete="name" maxlength="100" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">メールアドレス <span class="required">必須</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" maxlength="254" required>
+          </div>
+
+          <div class="form-group">
+            <label for="category">お問い合わせ種別 <span class="required">必須</span></label>
+            <select id="category" name="category" required>
+              <option value="">選択してください</option>
+              <option value="service">サービスについて</option>
+              <option value="product">プロダクトについて</option>
+              <option value="media">掲載・取材について</option>
+              <option value="other">その他</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">お問い合わせ内容 <span class="required">必須</span></label>
+            <textarea id="message" name="message" rows="8" minlength="1" maxlength="5000" aria-describedby="message-note" required></textarea>
+            <p class="field-note" id="message-note">
+              お問い合わせ内容は 5000 文字以内で入力してください。
+            </p>
+          </div>
+
+          <div class="form-group checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="privacy_agree" name="privacy_agree" required>
+              <span><a href="privacy.html" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>に同意します <span class="required">必須</span></span>
+            </label>
+          </div>
+
+          <div class="form-group recaptcha-group">
+            <div
+              class="g-recaptcha"
+              data-sitekey="6LfiLZUsAAAAAIsQ50LhetnHvg4E6PyHCsLPnvtJ"
+            </div>
+          </div>
+
+          <p class="form-note">
+            このフォームはスパム対策のため Google reCAPTCHA により保護されています。<br>
+            送信いただいた内容は、お問い合わせ対応および安全対策のために利用します。
+            詳しくは <a href="privacy.html" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a> をご確認ください。
+          </p>
+
+          <div class="form-status" id="form-status" aria-live="polite"></div>
+
+          <div class="form-actions">
+            <button type="submit" class="button button-primary" id="contact-submit-button">送信する</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="contact-note-section">
+      <div class="container section-inner">
+        <div class="contact-note card">
+          <h2>補足事項</h2>
+          <ul class="contact-note-list">
+            <li>お問い合わせ内容によっては、返信までお時間をいただく場合があります。</li>
+            <li>すべてのお問い合わせに返信をお約束するものではありません。</li>
+            <li>営業・勧誘を主目的としたご連絡は、ご遠慮いただけますと幸いです。</li>
+            <li>不正利用防止のため、フォームにはスパム対策を導入しています。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <nav class="footer-nav" aria-label="フッターナビゲーション">
+        <ul class="footer-nav-list">
+          <li><a href="/">トップページ</a></li>
+          <li><a href="products.html">プロダクト一覧</a></li>
+          <li><a href="about.html">開発者について</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="usage.html">サイトの利用について</a></li>
+          <li><a href="sitemap.html">サイトマップ</a></li>
+          <li><a href="disclaimer.html">免責事項</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
+
+      <p class="copyright">
+        &copy; 2026 青木直之 (@na0AaooQ) All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+  <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+  <script src="assets/js/contact.js"></script>
+  <script src="assets/js/site-header.js"></script>
+</body>
+</html>

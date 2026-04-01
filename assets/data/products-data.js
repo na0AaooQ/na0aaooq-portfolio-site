@@ -21,7 +21,7 @@ window.PRODUCT_ITEMS = [
         catch: "Xセンシティブ画像フィルター",
         description: "XのDMやタイムラインにおける、センシティブ画像との不用意な接触を減らし、安心して情報に触れられる環境づくりを目指すプロダクトです。",
         detailUrl: "products.html#gazo-mimamori",
-        externalUrl: "",
+        externalUrl: "https://chromewebstore.google.com/detail/hcegagndgkhkghagpahffblnljmfcpbj?utm_source=item-share-cb",
         imageSrc: "assets/img/products/gazo-mimamori-thumb.png",
         imageAlt: "がぞうみまもりの紹介画像",
         featured: true,

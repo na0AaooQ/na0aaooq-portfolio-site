@@ -72,6 +72,7 @@ na0AaooQ(青木直之)のポートフォリオサイトのソースコード
 ├── 404.html
 ├── robots.txt
 ├── sitemap.xml
+│
 ├── en/
 │   ├── index.html
 │   ├── about.html
@@ -82,11 +83,17 @@ na0AaooQ(青木直之)のポートフォリオサイトのソースコード
 │   ├── usage.html
 │   ├── disclaimer.html
 │   └── sitemap.html
+│
 ├── assets/
 │   ├── css/
 │   ├── js/
 │   ├── data/
 │   └── img/
+│
+├── deploy_portfolio_site.sh
+├── .gitignore
+├── .env.example
+├── .env
 ```
 
 ---
@@ -95,6 +102,46 @@ na0AaooQ(青木直之)のポートフォリオサイトのソースコード
 
 このリポジトリは、汎用テンプレートというより、  
 実運用中のポートフォリオサイトを継続改善していくためのソース管理 を目的としています。  
+
+---
+
+## Deployment
+
+デプロイには deploy_portfolio_site.sh を使用しています。
+ローカル環境でソースコード類の変更やテストをした後、ソースコード類に差分がある場合、S3バケットへファイルを反映する運用です。
+
+デプロイスクリプトを実行する前に、.envファイルを作成し、
+.envファイル内の PORTFOLIO_SITE_S3_BUKKET_NAME 環境変数にデプロイ先のS3バケット名を記載します。
+
+```
+cp -p .env.example .env
+```
+
+```
+vi .env
+```
+
+```
+# na0AaooQ(青木直之)のポートフォリオサイトのデプロイスクリプト
+#
+# デプロイ先のS3バケット名を記載する
+#   PORTFOLIO_SITE_S3_BUKKET_NAME="s3://xxxxxxxxxxxxxxx
+PORTFOLIO_SITE_S3_BUKKET_NAME="s3://xxxxxxxxxxxxxxx"
+```
+
+その後、デプロイスクリプトを実行すると、S3バケットに反映されます。
+
+```
+./deploy_portfolio_site.sh
+S3バケット [s3://xxxxxxxxxxxxxxx-ap-northeast-1-an] へのデプロイを開始します。
+S3バケット [s3://xxxxxxxxxxxxxxx-ap-northeast-1-an] へデプロイする対象ファイルです。
+(dryrun) upload: ./about.html to s3://xxxxxxxxxxxxxxx-ap-northeast-1-an/about.html
+(dryrun) upload: en/about.html to s3://xxxxxxxxxxxxxxx-ap-northeast-1-an/en/about.html
+S3バケットへのデプロイを実行しますか？ [y/N]: y
+S3バケット [s3://xxxxxxxxxxxxxxx-ap-northeast-1-an] へデプロイします。
+upload: ./about.html to s3://xxxxxxxxxxxxxxx-ap-northeast-1-an/about.html
+upload: en/about.html to s3://xxxxxxxxxxxxxxx-ap-northeast-1-an/en/about.html
+```
 
 ---
 

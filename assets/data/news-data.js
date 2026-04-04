@@ -1,5 +1,21 @@
 window.NEWS_ITEMS = [
     {
+        id: "20260403-portfolio-update",
+        date: "2026-04-03", 
+        title: "ポートフォリオサイト(正式版)を公開しました。", 
+        summary: "ポートフォリオサイト(正式版)を公開しました。プロダクト情報や開発者情報、各種案内ページを整備しました。",
+        url: "/news.html#20260403-portfolio-update",
+        published: true
+    },
+    {   
+        id: "20260402-portfolio-update",
+        date: "2026-04-02", 
+        title: "ポートフォリオサイトの表示言語に英語を追加しました", 
+        summary: "ポートフォリオサイトの表示言語を日本語、英語に切り替えられるようにしました。",
+        url: "/news.html#20260402-portfolio-update",
+        published: true
+    },
+    {
         id: "20260328-portfolio-update",
         date: "2026-03-28",
         title: "ポートフォリオサイトを改善しました",

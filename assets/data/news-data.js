@@ -1,5 +1,13 @@
 window.NEWS_ITEMS = [
     {
+        id: "20260410-business-info-update",
+        date: "2026-04-10",
+        title: "個人事業主として開業しました。登記情報を追記しました。",
+        summary: "個人事業主として開業し、ポートフォリオサイトの開発者情報ページに屋号、事業内容、事業所住所を追記しました。",
+        url: "/news.html#20260410-business-info-update",
+        published: true
+    },
+    {
         id: "20260403-portfolio-update",
         date: "2026-04-03", 
         title: "ポートフォリオサイト(正式版)を公開しました。", 

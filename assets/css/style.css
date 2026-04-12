@@ -864,6 +864,68 @@ section {
   }
 }
 
+.business-info-section {
+  padding-top: 0;
+  padding-bottom: 32px;
+}
+
+.business-info-card {
+  border-radius: 18px;
+}
+
+.business-info-list {
+  display: grid;
+  gap: 0;
+  margin: 0;
+}
+
+.business-info-row {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 20px;
+  padding: 18px 0;
+  border-top: 1px solid #e6f0ed;
+}
+
+.business-info-row:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.business-info-row:last-child {
+  padding-bottom: 0;
+}
+
+.business-info-row dt {
+  color: var(--text-strong);
+  font-weight: 700;
+}
+
+.business-info-row dd {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.9;
+}
+
+html[lang="ja"] .business-info-card .section-heading p {
+  width: fit-content;
+  max-width: 100%;
+  margin: 14px auto 0;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .business-info-section {
+    padding-bottom: 24px;
+  }
+
+  .business-info-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 16px 0;
+  }
+}
+
 /* =========================================
    Legal / policy pages
 ========================================= */

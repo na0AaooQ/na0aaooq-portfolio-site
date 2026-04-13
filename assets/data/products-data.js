@@ -28,8 +28,22 @@ window.PRODUCT_ITEMS = [
         published: true
     },
     {
-        id: "youtube-comment-mimamori",
+        id: "na0AaooQ-portfolio-site",
         sortOrder: 30,
+        status: "公開中",
+        name: "ポートフォリオサイト",
+        catch: "青木直之(na0AaooQ)のポートフォリオサイト",
+        description: "開発者(青木直之)のポートフォリオサイトです。実現したい未来、プロダクト内容、アイデア、意図、背景情報などを記載しているサイトです。",
+        detailUrl: "products.html#na0AaooQ-portfolio-site",
+        externalUrl: "https://portfolio.na0aaooq.com/",
+        imageSrc: "assets/img/products/na0AaooQ-portfolio-site-thumb.png",
+        imageAlt: "ポートフォリオサイトの画面イメージ",
+        featured: true,
+        published: true
+    },
+    {
+        id: "youtube-comment-mimamori",
+        sortOrder: 40,
         status: "開発中",
         name: "こめんとみまもり",
         catch: "Youtube安心コメントフィルター",
@@ -38,20 +52,6 @@ window.PRODUCT_ITEMS = [
         externalUrl: "",
         imageSrc: "assets/img/products/youtube-comment-mimamori-thumb.png",
         imageAlt: "こめんとみまもりの管理画面イメージ",
-        featured: true,
-        published: true
-    },
-    {
-        id: "na0AaooQ-portfolio-site",
-        sortOrder: 40,
-        status: "開発中",
-        name: "ポートフォリオサイト",
-        catch: "青木直之(na0AaooQ)のポートフォリオサイト",
-        description: "開発者(青木直之)のポートフォリオサイトです。実現したい未来、プロダクト内容、アイデア、意図、背景情報などを記載しているサイトです。",
-        detailUrl: "products.html#na0AaooQ-portfolio-site",
-        externalUrl: "https://portfolio.na0aaooq.com/",
-        imageSrc: "assets/img/products/na0AaooQ-portfolio-site-thumb.png",
-        imageAlt: "ポートフォリオサイトの画面イメージ",
         featured: true,
         published: true
     },

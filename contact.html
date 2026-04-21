@@ -214,10 +214,21 @@
 
           <div class="form-group">
             <label for="message">お問い合わせ内容 <span class="required">必須</span></label>
-            <textarea id="message" name="message" rows="8" minlength="1" maxlength="5000" aria-describedby="message-note" required></textarea>
-            <p class="field-note" id="message-note">
-              お問い合わせ内容は 5000 文字以内で入力してください。
-            </p>
+            <textarea
+              id="message"
+              name="message"
+              rows="8"
+              minlength="1"
+              maxlength="5000"
+              aria-describedby="message-note message-count"
+              required
+            ></textarea>
+            <div class="field-note-row">
+              <p class="field-note" id="message-note">
+                お問い合わせ内容は 5000 文字以内で入力してください。
+              </p>
+              <p class="field-count" id="message-count">0 / 5000</p>
+            </div>
           </div>
 
           <div class="form-group checkbox-group">

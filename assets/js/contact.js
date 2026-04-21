@@ -6,8 +6,10 @@
   const form = document.getElementById("contact-form");
   const statusEl = document.getElementById("form-status");
   const submitButton = document.getElementById("contact-submit-button");
+  const messageInput = document.getElementById("message");
+  const messageCountEl = document.getElementById("message-count");
 
-  if (!form || !statusEl || !submitButton) {
+  if (!form || !statusEl || !submitButton || !messageInput || !messageCountEl) {
     return;
   }
 
@@ -105,6 +107,14 @@
 
   function normalizeText(value) {
     return (value || "").replace(/\r\n/g, "\n").trim();
+  }
+
+  // 問い合わせ本文の入力文字数のカウンター用
+  function updateMessageCounter() {
+    const currentLength = messageInput.value.length;
+    const maxLength = Number(messageInput.getAttribute("maxlength")) || 5000;
+
+    messageCountEl.textContent = `${currentLength} / ${maxLength}`;
   }
 
   function hasMeaningfulText(value) {
@@ -254,6 +264,13 @@
 
   submitButton.textContent = messages.submit;
 
+  updateMessageCounter();
+
+  messageInput.addEventListener("input", () => {
+    updateMessageCounter();
+  });
+
+
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
@@ -273,6 +290,7 @@
       const result = await submitContactForm(formData);
       setStatus(result.message || messages.success, "success");
       form.reset();
+      updateMessageCounter();
       resetRecaptcha();
     } catch (error) {
       setStatus(error.message || messages.sendError, "error");

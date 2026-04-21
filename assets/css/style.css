@@ -1087,6 +1087,28 @@ html[lang="ja"] .business-info-card .section-heading p {
   margin-top: 8px;
 }
 
+.field-note-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.field-note-row .field-note {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.field-count {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: right;
+  white-space: nowrap;
+}
+
 .checkbox-group {
   margin-top: 24px;
 }
@@ -1140,6 +1162,19 @@ html[lang="ja"] .business-info-card .section-heading p {
   gap: 10px;
   padding-left: 1.25rem;
   list-style: disc;
+}
+
+@media (max-width: 768px) {
+  .field-note-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .field-count {
+    width: 100%;
+    text-align: right;
+  }
 }
 
 /* =========================================

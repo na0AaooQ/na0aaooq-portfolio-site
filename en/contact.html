@@ -254,12 +254,15 @@
               rows="8"
               minlength="1"
               maxlength="5000"
-              aria-describedby="message-note"
+              aria-describedby="message-note message-count"
               required
             ></textarea>
-            <p class="field-note" id="message-note">
-              Please keep your message within 5000 characters.
-            </p>
+            <div class="field-note-row">
+              <p class="field-note" id="message-note">
+                Please keep your message within 5000 characters.
+              </p>
+              <p class="field-count" id="message-count">0 / 5000</p>
+            </div>
           </div>
 
           <div class="form-group checkbox-group">

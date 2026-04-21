@@ -24,6 +24,22 @@
             .replace(/'/g, "&#39;");
     }
 
+    function renderLink(href, label, openInNewTab) {
+        var html = "";
+
+        html += '<p class="card-link">';
+        html +=     '<a href="' + escapeHtml(href) + '"';
+
+        if (openInNewTab) {
+            html += ' target="_blank" rel="noopener noreferrer"';
+        }
+
+        html += '>' + escapeHtml(label) + '</a>';
+        html += '</p>';
+
+        return html;
+    }
+
     function renderProductCard(item, options) {
         var headingTag = options && options.headingTag ? options.headingTag : "h3";
         var showExternalLink = options && options.showExternalLink === true;
@@ -42,14 +58,17 @@
         html +=         '[' + escapeHtml(item.status) + '] ' + escapeHtml(item.name) + '｜' + escapeHtml(item.catch);
         html +=     '</' + headingTag + '>';
         html +=     '<p>' + escapeHtml(item.description) + '</p>';
-        html +=     '<p class="card-link">';
-        html +=         '<a href="' + escapeHtml(item.detailUrl) + '">詳しく見る</a>';
-        html +=     '</p>';
+
+        if (item.detailUrl) {
+            html += renderLink(item.detailUrl, "詳しく見る", false);
+        }
+
+        if (item.infoUrl && item.infoLabel) {
+            html += renderLink(item.infoUrl, item.infoLabel, item.infoTargetBlank === true);
+        }
 
         if (showExternalLink && item.externalUrl) {
-            html += '<p class="card-link">';
-            html +=     '<a href="' + escapeHtml(item.externalUrl) + '" target="_blank" rel="noopener noreferrer">公開ページを見る</a>';
-            html += '</p>';
+            html += renderLink(item.externalUrl, "公開ページを見る", true);
         }
 
         html += '</article>';

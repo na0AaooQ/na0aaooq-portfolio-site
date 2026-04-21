@@ -1,5 +1,21 @@
 window.NEWS_ITEMS = [
     {
+        id: "20260422-business-info-update",
+        date: "2026-04-22",
+        title: "「プロダクト一覧画面」に各プロダクトの紹介資料等を掲載しました。",
+        summary: "「プロダクト一覧画面」に各プロダクトのサービス説明、紹介資料を掲載しました。",
+        url: "/news.html#20260422-business-info-update",
+        published: true
+    },
+    {
+        id: "20260421-business-info-update",
+        date: "2026-04-21",
+        title: "プロダクト「がぞうみまもり」の正式版をリリースしました。",
+        summary: "プロダクト「がぞうみまもり｜Xセンシティブ画像フィルター」のベータテストが完了し、正式版として、Google Chrome ウェブストアへリリース・公開しました。",
+        url: "/news.html#20260421-business-info-update",
+        published: true
+    },
+    {
         id: "20260410-business-info-update",
         date: "2026-04-10",
         title: "個人事業主として開業しました。登記情報を追記しました。",

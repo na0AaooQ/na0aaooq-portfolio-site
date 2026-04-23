@@ -103,6 +103,20 @@
 </script>
 
 <body>
+  <!--
+    Loading animation shown on the first display of the English top page
+  -->
+  <div
+    id="page-loading"
+    class="page-loading"
+    aria-hidden="true"
+  >
+    <div class="page-loading__content" role="status" aria-live="polite">
+      <div class="page-loading__spinner" aria-hidden="true"></div>
+      <p class="page-loading__text">Loading...</p>
+    </div>
+  </div>
+
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="site-logo" aria-label="Go to English top page">
@@ -305,6 +319,7 @@
     </div>
   </footer>
 
+  <script src="../assets/js/index.js"></script>
   <script src="../assets/js/site-header.js"></script>
 </body>
 </html>

@@ -90,6 +90,44 @@
   </script>
 
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- ===== Webブラウザの言語設定により、表示ページを日本語版、英語版に切り替える ===== -->
+  <script>
+    (function () {
+      var STORAGE_KEY = "portfolioPreferredLanguage";
+      var ENGLISH_TOP_PATH = "/en/index.html";
+      var currentPath = window.location.pathname;
+      var isJapaneseTopPage = currentPath === "/" || currentPath === "/index.html";
+
+      function getStoredLanguage() {
+        try {
+          return window.localStorage.getItem(STORAGE_KEY);
+        } catch (error) {
+          return null;
+        }
+      }
+
+      function detectBrowserLanguage() {
+        var languages = navigator.languages || [navigator.language || ""];
+
+        return languages.some(function (language) {
+          return String(language).toLowerCase().indexOf("ja") === 0;
+        })
+          ? "ja"
+          : "en";
+      }
+
+      if (!isJapaneseTopPage) {
+        return;
+      }
+
+      var preferredLanguage = getStoredLanguage() || detectBrowserLanguage();
+
+      if (preferredLanguage === "en") {
+        window.location.replace(ENGLISH_TOP_PATH);
+      }
+    })();
+  </script>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6018MG4PQ9"></script>
@@ -180,7 +218,7 @@
         </h1>
 
         <p class="hero-text">
-          言葉のリスクを見える化し、<br>
+          言葉やコミュニケーションのリスクを見える化し、<br>
           やさしいコミュニケーションを支える仕組みを提供します。
         </p>
 

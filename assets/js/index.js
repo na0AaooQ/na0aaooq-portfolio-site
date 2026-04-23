@@ -1,7 +1,7 @@
 (() => {
   "use strict";
 
-  const STORAGE_KEY = "portfolioIndexLoadingShown";
+  const STORAGE_KEY = `portfolioIndexLoadingShown:${window.location.pathname}`;
   const loadingEl = document.getElementById("page-loading");
 
   if (!loadingEl) {

@@ -1,9 +1,17 @@
 window.NEWS_ITEMS = [
     {
+        id: "20260423-business-info-update",
+        date: "2026-04-23",
+        title: "「プロダクト一覧」画面に「こめんとみまもり」のコンセプト資料を掲載しました。",
+        summary: "「こめんとみまもり｜Youtube安心コメントフィルター」のサービスコンセプト資料を掲載しました。",
+        url: "/news.html#20260423-business-info-update",
+        published: true
+    },
+    {
         id: "20260422-business-info-update",
         date: "2026-04-22",
-        title: "「プロダクト一覧画面」に各プロダクトの紹介資料等を掲載しました。",
-        summary: "「プロダクト一覧画面」に各プロダクトのサービス説明、紹介資料を掲載しました。",
+        title: "「プロダクト一覧」に各プロダクトの紹介資料等を掲載しました。",
+        summary: "「プロダクト一覧」に各プロダクトのサービス説明、紹介資料を掲載しました。",
         url: "/news.html#20260422-business-info-update",
         published: true
     },

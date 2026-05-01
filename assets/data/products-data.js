@@ -52,8 +52,8 @@ window.PRODUCT_ITEMS = [
         sortOrder: 40,
         status: "開発中",
         name: "こめんとみまもり",
-        catch: "Youtube安心コメントフィルター",
-        description: "「人が孤独で壊れにくい社会」を支える、配信者さま(YouTuberさま、VTuberさま)、そしてファンのみなさまの心を守るプロダクトです。Youtubeコメントに不意に投稿される誹謗中傷や攻撃的なコメントについて、システムがうけとめ、フィルタリングして表示することで、安心して配信と視聴を行える環境づくりを目指すプロダクトです。",
+        catch: "YouTube安心コメントフィルター",
+        description: "「人が孤独で壊れにくい社会」を支える、配信者さま(YouTuberさま、VTuberさま)、そしてファンのみなさまの心を守るプロダクトです。YouTubeコメントに不意に投稿される誹謗中傷や攻撃的なコメントについて、システムがうけとめ、フィルタリングして表示することで、安心して配信と視聴を行える環境づくりを目指すプロダクトです。",
         detailUrl: "products.html#youtube-comment-mimamori",
         infoUrl: "assets/pdf/youtube-comment-mimamori-introduction.pdf",
         infoLabel: "紹介資料を見る",
@@ -79,13 +79,27 @@ window.PRODUCT_ITEMS = [
         published: true
     },
     {
-        id: "kotoba-workplace-harassment",
+        id: "workplace-1on1-harassment-protect",
         sortOrder: 60,
         status: "検討中",
-        name: "ことばみまもり",
-        catch: "職場内のパワハラ・セクハラ・マタハラ等の攻撃的言動を防止する",
+        name: "しょくばみまもり",
+        catch: "1on1ミーティングや密室会議における、パワハラ・セクハラ・マタハラ等のハラスメント、攻撃的言動を防止する",
         description: "検討中。",
-        detailUrl: "products.html#kotoba-workplace-harassment",
+        detailUrl: "products.html#workplace-1on1-harassment-protect",
+        externalUrl: "",
+        imageSrc: "",
+        imageAlt: "",
+        featured: false,
+        published: true
+    },
+    {
+        id: "workplace-various-harassment-protect",
+        sortOrder: 70,
+        status: "検討中",
+        name: "しょくばみまもり",
+        catch: "職場のパワハラ・セクハラ・マタハラ等のハラスメント、攻撃的言動を防止する",
+        description: "検討中。",
+        detailUrl: "products.html#workplace-various-harassment-protect",
         externalUrl: "",
         imageSrc: "",
         imageAlt: "",
@@ -94,7 +108,7 @@ window.PRODUCT_ITEMS = [
     },
     {
         id: "kotoba-business-pressure",
-        sortOrder: 70,
+        sortOrder: 80,
         status: "検討中",
         name: "ことばみまもり",
         catch: "仕事や取引関係における優越的立場を背景とした、攻撃的言動を防止する",
@@ -108,7 +122,7 @@ window.PRODUCT_ITEMS = [
     },
     {
         id: "kotoba-school-bullying",
-        sortOrder: 80,
+        sortOrder: 90,
         status: "検討中",
         name: "ことばみまもり",
         catch: "学校内のいじめや攻撃的言動を防止する",
@@ -122,7 +136,7 @@ window.PRODUCT_ITEMS = [
     },
     {
         id: "kotoba-community-attack",
-        sortOrder: 90,
+        sortOrder: 100,
         status: "検討中",
         name: "ことばみまもり",
         catch: "さまざまなコミュニティ内における、複数人から一人に対する攻撃的言動を防止する",
@@ -136,7 +150,7 @@ window.PRODUCT_ITEMS = [
     },
     {
         id: "kotoba-structure-analysis",
-        sortOrder: 100,
+        sortOrder: 110,
         status: "検討中",
         name: "ことばみまもり",
         catch: "言葉の傾向を分析・可視化し、言葉の発生原因と構造を可視化する",
@@ -150,7 +164,7 @@ window.PRODUCT_ITEMS = [
     },
     {
         id: "kokoro-mental-visualization",
-        sortOrder: 110,
+        sortOrder: 120,
         status: "検討中",
         name: "こころみまもり",
         catch: "言葉やコミュニケーションによる、心理的なダメージを可視化する",
@@ -164,7 +178,7 @@ window.PRODUCT_ITEMS = [
     },
     {
         id: "kokoro-support-service",
-        sortOrder: 120,
+        sortOrder: 130,
         status: "検討中",
         name: "こころみまもり",
         catch: "心無い言葉やコミュニケーションで心が傷ついてしまった方へ、寄り添い、支えるサービス",
@@ -178,7 +192,7 @@ window.PRODUCT_ITEMS = [
     },
     {
         id: "kokoro-training-program",
-        sortOrder: 130,
+        sortOrder: 140,
         status: "検討中",
         name: "こころみまもり",
         catch: "攻撃的言動をする方に向けて、心・技・体を開発者とともに鍛え、人の痛みや心を慮ることを、一緒に学んでいただく鍛錬プログラム",
@@ -192,7 +206,7 @@ window.PRODUCT_ITEMS = [
     },
     {
         id: "kokoro-management-report",
-        sortOrder: 140,
+        sortOrder: 150,
         status: "検討中",
         name: "こころみまもり",
         catch: "経営者・管理職等のみなさまに向けて、言葉やコミニュケーションのリスクによる、経営リスクやレビテーションリスク等、改善レポートと改善計画を提供する",
@@ -206,7 +220,7 @@ window.PRODUCT_ITEMS = [
     },
     {
         id: "kokoro-society-report",
-        sortOrder: 150,
+        sortOrder: 160,
         status: "検討中",
         name: "こころみまもり",
         catch: "社会・政治家のみなさまに向けて、言葉やコミュニケーションのリスクによる、国政や国民生活に与えるリスク、改善レポートと改善計画を提供する",

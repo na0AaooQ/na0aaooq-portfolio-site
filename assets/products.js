@@ -1,6 +1,30 @@
 (function () {
     "use strict";
 
+    function getPageLanguage() {
+        return document.documentElement.lang === "en" ? "en" : "ja";
+    }
+
+    function getProductLabels() {
+        var pageLanguage = getPageLanguage();
+
+        if (pageLanguage === "en") {
+            return {
+                emptyMessage: "There are currently no products to display.",
+                detailLabel: "Learn more",
+                externalLabel: "View public page",
+                defaultImageAltSuffix: " image"
+            };
+        }
+
+        return {
+            emptyMessage: "現在、表示できるプロダクトはありません。",
+            detailLabel: "詳しく見る",
+            externalLabel: "公開ページを見る",
+            defaultImageAltSuffix: "のイメージ画像"
+        };
+    }
+
     function getPublishedProductItems() {
         if (!Array.isArray(window.PRODUCT_ITEMS)) {
             return [];
@@ -43,6 +67,8 @@
     function renderProductCard(item, options) {
         var headingTag = options && options.headingTag ? options.headingTag : "h3";
         var showExternalLink = options && options.showExternalLink === true;
+        var labels = getProductLabels();
+        var defaultImageAlt = item.name + labels.defaultImageAltSuffix;
 
         var html = "";
 
@@ -50,7 +76,7 @@
 
         if (item.imageSrc) {
             html += '<div class="product-card__image">';
-            html +=     '<img src="' + escapeHtml(item.imageSrc) + '" alt="' + escapeHtml(item.imageAlt || (item.name + "のイメージ画像")) + '" loading="lazy">';
+            html +=     '<img src="' + escapeHtml(item.imageSrc) + '" alt="' + escapeHtml(item.imageAlt || defaultImageAlt) + '" loading="lazy">';
             html += '</div>';
         }
 
@@ -60,7 +86,7 @@
         html +=     '<p>' + escapeHtml(item.description) + '</p>';
 
         if (item.detailUrl) {
-            html += renderLink(item.detailUrl, "詳しく見る", false);
+            html += renderLink(item.detailUrl, labels.detailLabel, false);
         }
 
         if (item.infoUrl && item.infoLabel) {
@@ -68,7 +94,7 @@
         }
 
         if (showExternalLink && item.externalUrl) {
-            html += renderLink(item.externalUrl, "公開ページを見る", true);
+            html += renderLink(item.externalUrl, labels.externalLabel, true);
         }
 
         html += '</article>';
@@ -78,6 +104,8 @@
 
     function renderTopProducts(containerId) {
         var container = document.getElementById(containerId);
+        var labels = getProductLabels();
+
         if (!container) {
             return;
         }
@@ -89,7 +117,7 @@
             .slice(0, 4);
 
         if (items.length === 0) {
-            container.innerHTML = '<p class="products-empty">現在、表示できるプロダクトはありません。</p>';
+            container.innerHTML = '<p class="products-empty">' + escapeHtml(labels.emptyMessage) + '</p>';
             return;
         }
 
@@ -105,6 +133,8 @@
 
     function renderProductsArchive(containerId) {
         var container = document.getElementById(containerId);
+        var labels = getProductLabels();
+
         if (!container) {
             return;
         }
@@ -112,7 +142,7 @@
         var items = getPublishedProductItems();
 
         if (items.length === 0) {
-            container.innerHTML = '<p class="products-empty">現在、表示できるプロダクトはありません。</p>';
+            container.innerHTML = '<p class="products-empty">' + escapeHtml(labels.emptyMessage) + '</p>';
             return;
         }
 

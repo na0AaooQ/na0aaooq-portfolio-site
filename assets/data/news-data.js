@@ -1,5 +1,13 @@
 window.NEWS_ITEMS = [
     {
+        id: "20260502-business-info-update",
+        date: "2026-05-02",
+        title: "「プロダクト一覧」の検討中のプロダクト情報を更新しました。",
+        summary: "検討中のプロダクト掲載情報を更新しました。「しょくばみまもり」等の情報を追記しました。",
+        url: "/news.html#20260502-business-info-update",
+        published: true
+    },
+    {
         id: "20260423-business-info-update",
         date: "2026-04-23",
         title: "「プロダクト一覧」画面に「こめんとみまもり」のコンセプト資料を掲載しました。",

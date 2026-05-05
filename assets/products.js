@@ -13,7 +13,10 @@
                 emptyMessage: "There are currently no products to display.",
                 detailLabel: "Learn more",
                 externalLabel: "View public page",
-                defaultImageAltSuffix: " image"
+                defaultImageAltSuffix: " image",
+                getImageZoomLabel: function (imageAlt) {
+                    return "View larger image: " + imageAlt;
+                }
             };
         }
 
@@ -21,7 +24,10 @@
             emptyMessage: "現在、表示できるプロダクトはありません。",
             detailLabel: "詳しく見る",
             externalLabel: "公開ページを見る",
-            defaultImageAltSuffix: "のイメージ画像"
+            defaultImageAltSuffix: "のイメージ画像",
+            getImageZoomLabel: function (imageAlt) {
+                return imageAlt + "を拡大表示";
+            }
         };
     }
 
@@ -75,8 +81,13 @@
         html += '<article class="card product-card" id="' + escapeHtml(item.id) + '">';
 
         if (item.imageSrc) {
+            var imageAlt = item.imageAlt || defaultImageAlt;
+            var imageZoomLabel = labels.getImageZoomLabel(imageAlt);
+
             html += '<div class="product-card__image">';
-            html +=     '<img src="' + escapeHtml(item.imageSrc) + '" alt="' + escapeHtml(item.imageAlt || defaultImageAlt) + '" loading="lazy">';
+            html +=     '<button type="button" class="product-card__image-button" aria-label="' + escapeHtml(imageZoomLabel) + '">';
+            html +=         '<img src="' + escapeHtml(item.imageSrc) + '" alt="' + escapeHtml(imageAlt) + '" loading="lazy">';
+            html +=     '</button>';
             html += '</div>';
         }
 
@@ -156,8 +167,61 @@
         container.innerHTML = html;
     }
 
+    function initializeProductImageModal() {
+        var modal = document.getElementById("product-image-modal");
+        var modalImage = document.getElementById("product-image-modal-image");
+
+        if (!modal || !modalImage) {
+            return;
+        }
+
+        function openModal(image) {
+            modalImage.src = image.currentSrc || image.src;
+            modalImage.alt = image.alt || "";
+            modal.classList.add("is-open");
+            modal.setAttribute("aria-hidden", "false");
+            document.body.classList.add("is-product-image-modal-open");
+        }
+
+        function closeModal() {
+            modal.classList.remove("is-open");
+            modal.setAttribute("aria-hidden", "true");
+            document.body.classList.remove("is-product-image-modal-open");
+            modalImage.src = "";
+            modalImage.alt = "";
+        }
+
+        document.addEventListener("click", function (event) {
+            var imageButton = event.target.closest(".product-card__image-button");
+            var closeButton = event.target.closest("[data-product-image-modal-close]");
+
+            if (imageButton) {
+                var image = imageButton.querySelector("img");
+
+                if (image) {
+                    openModal(image);
+                }
+
+                return;
+            }
+
+            if (closeButton) {
+                closeModal();
+            }
+        });
+
+        modalImage.addEventListener("click", closeModal);
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape" && modal.classList.contains("is-open")) {
+                closeModal();
+            }
+        });
+    }
+
     document.addEventListener("DOMContentLoaded", function () {
         renderTopProducts("top-products-list");
         renderProductsArchive("products-archive-list");
+        initializeProductImageModal();
     });
 })();

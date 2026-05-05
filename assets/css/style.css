@@ -1751,3 +1751,133 @@ html[lang="ja"] .business-info-card .section-heading p {
   padding-left: 10px;
   padding-right: 10px;
 }
+
+/* =========================================
+   Products Iamge Modal
+========================================= */
+.product-card__image {
+    text-align: center;
+}
+
+.product-card__image-button {
+    background: transparent;
+    border: 0;
+    cursor: zoom-in;
+    display: inline-block;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.product-card__image-button img {
+    display: block;
+}
+
+.product-card__image-button:focus-visible {
+  outline: 3px solid #2f7d6e;
+  outline-offset: 6px;
+}
+
+.product-image-modal {
+  align-items: center;
+  background: rgba(16, 32, 29, 0.72);
+  display: none;
+  inset: 0;
+  justify-content: center;
+  padding: 24px;
+  position: fixed;
+  z-index: 1000;
+}
+
+.product-image-modal.is-open {
+  display: flex;
+}
+
+.product-image-modal__backdrop {
+  background: transparent;
+  border: 0;
+  cursor: zoom-out;
+  inset: 0;
+  padding: 0;
+  position: absolute;
+}
+
+.product-image-modal__content {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  max-height: 88vh;
+  max-width: 92vw;
+  position: relative;
+  z-index: 1;
+}
+
+.product-image-modal__image {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+  cursor: zoom-out;
+  display: block;
+  max-height: calc(88vh + 20px);
+  max-width: 94vw;
+  object-fit: contain;
+  padding: 16px;
+}
+
+.product-image-modal__close {
+  align-items: center;
+  background: #ffffff;
+  border: 0;
+  border-radius: 999px;
+  color: #203b35;
+  cursor: pointer;
+  display: flex;
+  font-size: 28px;
+  height: 44px;
+  justify-content: center;
+  line-height: 1;
+  position: absolute;
+  right: -16px;
+  top: -16px;
+  width: 44px;
+  z-index: 2;
+}
+
+.product-image-modal__close:hover {
+  opacity: 0.82;
+}
+
+.product-image-modal__close:focus-visible {
+  outline: 3px solid #2f7d6e;
+  outline-offset: 4px;
+}
+
+body.is-product-image-modal-open {
+  overflow: hidden;
+}
+
+@media (max-width: 640px) {
+  .product-image-modal {
+    padding: 16px;
+  }
+
+  .product-image-modal__content {
+    max-height: 84vh;
+    max-width: 94vw;
+  }
+
+  .product-image-modal__image {
+    border-radius: 14px;
+    max-height: calc(78vh + 20px);
+    max-width: 94vw;
+    padding: 10px;
+  }
+
+  .product-image-modal__close {
+    font-size: 24px;
+    height: 40px;
+    right: -10px;
+    top: -10px;
+    width: 40px;
+  }
+}

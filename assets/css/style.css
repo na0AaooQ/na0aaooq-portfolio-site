@@ -926,6 +926,148 @@ html[lang="ja"] .business-info-card .section-heading p {
   }
 }
 
+.kokoro-character-section {
+  padding-top: 40px;
+  padding-bottom: 56px;
+  background: var(--surface-soft);
+}
+
+.kokoro-character-section .section-heading {
+  text-align: center;
+}
+
+.kokoro-character-layout {
+  display: grid;
+  gap: 24px;
+}
+
+.kokoro-character-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  gap: 28px;
+  align-items: start;
+}
+
+.kokoro-character-content p + p {
+  margin-top: 1em;
+}
+
+.kokoro-character-content,
+.kokoro-character-media {
+  align-self: start;
+}
+
+.kokoro-character-media {
+  display: grid;
+  gap: 18px;
+  justify-items: center;
+}
+
+.kokoro-character-figure,
+.kokoro-character-video,
+.kokoro-illustration-card {
+  margin: 0;
+}
+
+.kokoro-character-image {
+  width: min(100%, 240px);
+  margin: 0 auto;
+  border-radius: 18px;
+}
+
+.kokoro-character-image-button {
+  display: block;
+  width: min(100%, 240px);
+  margin: 0 auto;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 18px;
+  cursor: zoom-in;
+  line-height: 0;
+}
+
+.kokoro-character-image-button .kokoro-character-image {
+  width: 100%;
+}
+
+.kokoro-character-image-button:focus-visible {
+  outline: 3px solid #2f7d6e;
+  outline-offset: 6px;
+}
+
+.kokoro-character-video video {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  background: #ffffff;
+  border: 1px solid var(--line-soft);
+  border-radius: 16px;
+}
+
+.kokoro-character-video figcaption,
+.kokoro-illustration-card figcaption {
+  margin-top: 12px;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.kokoro-illustration-card {
+  display: grid;
+  grid-template-columns: minmax(260px, 360px) minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+}
+
+.kokoro-illustration-card img {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  border: 1px solid var(--line-soft);
+  border-radius: 16px;
+}
+
+.kokoro-illustration-card p + p {
+  margin-top: 0.8em;
+}
+
+.kokoro-illustration-credit {
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .kokoro-character-section {
+    padding-top: 32px;
+    padding-bottom: 44px;
+  }
+
+  .kokoro-character-card,
+  .kokoro-illustration-card {
+    grid-template-columns: 1fr;
+  }
+
+  .kokoro-character-card {
+    gap: 22px;
+  }
+
+  .kokoro-character-media {
+    justify-items: stretch;
+  }
+
+  .kokoro-character-image {
+    max-width: 220px;
+  }
+
+  .kokoro-character-image-button {
+    width: min(100%, 220px);
+  }
+
+  .kokoro-character-video video {
+    max-width: none;
+  }
+}
+
 /* =========================================
    Legal / policy pages
 ========================================= */

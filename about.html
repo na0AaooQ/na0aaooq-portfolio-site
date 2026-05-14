@@ -266,6 +266,92 @@
       </div>
     </section>
 
+    <section id="kokoro-mimamori-kun" class="kokoro-character-section">
+      <div class="container section-inner">
+        <div class="section-heading">
+          <h2>こころみまもりくんについて</h2>
+          <p>
+            こころみまもりの想いや、やさしいコミュニケーションを支える考え方を、
+            あたたかく伝えるシンボルキャラクターです。
+          </p>
+        </div>
+
+        <div class="kokoro-character-layout">
+          <article class="card kokoro-character-card">
+            <div class="kokoro-character-content">
+              <p>
+                「こころみまもりくん」は、「やさしいコミュニケーションを支える仕組み」や、<br>
+                「人の心をそっと守るための仕組み」を表すシンボルキャラクターです。
+              </p>
+              <p>
+                人の心に寄り添い、そっと心を守る。
+                そんな願いを込めて、心を守る盾のような姿に、<br>
+                やさしさ、かわいらしさ、素朴さを重ねています。
+              </p>
+              <p>
+                「こころみまもり」の各サービスが目指しているのは、<br>
+                誰かを責めるための仕組みではなく、<br>
+                人が少し安心して言葉や情報と向き合えるようにするための補助です。<br>
+                「こころみまもりくん」も、その考え方をやわらかく伝える存在として育てています。
+              </p>
+            </div>
+
+            <div class="kokoro-character-media">
+              <figure class="kokoro-character-figure">
+                <button
+                  type="button"
+                  class="kokoro-character-image-button"
+                  aria-label="こころみまもりくんの画像を拡大表示"
+                  data-image-modal-trigger
+                >
+                  <img
+                    class="kokoro-character-image"
+                    src="assets/img/kokoro-mimamori/kokoro-mimamori-kun-message.png"
+                    alt="こころみまもりくんがみんなの心をそっと守るよと伝えているイラスト"
+                    width="1486"
+                    height="1540"
+                    loading="lazy"
+                  >
+                </button>
+              </figure>
+
+              <figure class="kokoro-character-video">
+                <video controls preload="metadata" aria-label="こころみまもりくんの挨拶動画">
+                  <source src="assets/video/kokoro-mimamori/kokoro-mimamori-kun-greeting.mp4" type="video/mp4">
+                  お使いのブラウザでは動画を再生できません。
+                </video>
+                <figcaption>
+                  こころみまもりくんが、みんなの心をそっと守る気持ちを伝える短い挨拶動画です。
+                </figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <figure class="card kokoro-illustration-card">
+            <img
+              src="assets/img/kokoro-mimamori/kokoro-mimamori-illustration.jpg"
+              alt="こころみまもりの願いをあたたかく表現したイメージイラスト"
+              width="1254"
+              height="1254"
+              loading="lazy"
+            >
+            <figcaption>
+              <p>
+                このイラストは、こころみまもりの活動を応援してくださっている
+                「AIおじ|40代から始めるAI×ノーコード」様に制作いただいたイメージイラストです。
+                人の心をあたたかく包み込むような、こころみまもりの願いを表現していただきました。<br>
+                なお、サイトへのイメージイラスト掲載のご許可は頂いております。
+              </p>
+              <p class="kokoro-illustration-credit">
+                イラスト制作:
+                <a href="https://x.com/AIojix" target="_blank" rel="noopener noreferrer">AIおじ|40代から始めるAI×ノーコード 様（X: @AIojix）</a>
+              </p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
     <section class="about-detail-section">
       <div class="container section-inner">
         <div class="detail-blocks">
@@ -450,6 +536,37 @@
         </div>
       </div>
     </section>
+
+    <div
+      id="product-image-modal"
+      class="product-image-modal"
+      aria-hidden="true"
+    >
+      <button
+        type="button"
+        class="product-image-modal__backdrop"
+        aria-label="拡大画像を閉じる"
+        data-product-image-modal-close
+      ></button>
+
+      <div class="product-image-modal__content">
+        <button
+          type="button"
+          class="product-image-modal__close"
+          aria-label="拡大画像を閉じる"
+          data-product-image-modal-close
+        >
+          ×
+        </button>
+
+        <img
+          id="product-image-modal-image"
+          class="product-image-modal__image"
+          src=""
+          alt=""
+        >
+      </div>
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -473,6 +590,7 @@
     </div>
   </footer>
 
+  <script src="assets/js/image-modal.js"></script>
   <script src="assets/js/site-header.js"></script>
 </body>
 </html>

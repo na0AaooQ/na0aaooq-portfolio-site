@@ -1,5 +1,13 @@
 window.NEWS_ITEMS = [
     {
+        id: "20260515-kokoro-mimamori-kun-update",
+        date: "2026-05-15",
+        title: "「開発者について」と「プロダクト一覧」を更新しました。",
+        summary: "「開発者について」にこころみまもりくんの紹介、挨拶動画、こころみまもりのイメージイラストを追加しました。また、「プロダクト一覧」に「ことばうけみまもり｜Xことばに心のワンクッション」を追加しました。",
+        url: "/news.html#20260513-kokoro-mimamori-kun-update",
+        published: true
+    },
+    {
         id: "20260502-business-info-update",
         date: "2026-05-02",
         title: "「プロダクト一覧」の検討中のプロダクト情報を更新しました。",

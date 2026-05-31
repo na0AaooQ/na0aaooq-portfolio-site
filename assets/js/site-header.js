@@ -11,7 +11,7 @@
         function setPreferredLanguage(language) {
             try {
                 window.localStorage.setItem(STORAGE_KEY, language);
-            } catch (error) {
+            } catch (_error) {
                 /* もし、Webブラウザの localStorage が利用できない場合は何もしない */
             }
         }

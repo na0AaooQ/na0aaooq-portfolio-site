@@ -209,3 +209,4 @@ __marimo__/
 # Local Files Ignore
 .env
 .DS_Store
+node_modules/

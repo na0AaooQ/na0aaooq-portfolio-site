@@ -70,7 +70,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "kotoba-uke-mimamori",
         sortOrder: 40,
-        status: "Under Consideration",
+        status: "In Development",
         name: "Kotoba Uke Mimamori",
         catch: "A gentle pause before words on X",
         description: "Kotoba Uke Mimamori is a support tool designed to place a gentle pause in front of posts on X, formerly Twitter, that may place a heavy emotional burden on the reader, such as personal attacks, denial of someone's existence, discriminatory expressions, or persistent harassment. It is not intended to regulate different opinions or healthy criticism. Instead, it provides an option to reduce emotional strain while helping protect the connections and dialogue that matter to you.",

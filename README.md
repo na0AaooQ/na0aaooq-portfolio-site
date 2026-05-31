@@ -29,6 +29,8 @@ na0AaooQ(青木直之)のポートフォリオサイトのソースコード
 ## Tech Stack
 
 - HTML / CSS / JavaScript
+- npm
+- Biome
 - Amazon S3
 - Amazon CloudFront
 - ACM
@@ -92,10 +94,55 @@ na0AaooQ(青木直之)のポートフォリオサイトのソースコード
 │   └── img/
 │
 ├── deploy_portfolio_site.sh
+├── package.json
+├── biome.json
+├── tests/
 ├── .gitignore
 ├── .env.example
 ├── .env
 ```
+
+---
+
+## Development
+
+初回セットアップでは、以下を実行して npm 依存関係をインストールします。
+
+```bash
+npm install
+```
+
+ローカルテストを実行します。
+
+```bash
+npm test
+```
+
+Biome Linter を実行します。
+
+```bash
+npm run lint
+```
+
+Biome Formatter の差分がないか確認します。
+
+```bash
+npm run format:check
+```
+
+Biome Formatter で自動整形します。
+
+```bash
+npm run format
+```
+
+構文チェック、ローカルテスト、Lint、Formatter確認をまとめて実行します。
+
+```bash
+npm run check
+```
+
+デプロイ前には、原則として `npm run check` を実行してください。
 
 ---
 

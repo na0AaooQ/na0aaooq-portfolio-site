@@ -27,6 +27,11 @@ if [ -d "${BASE_DIR}" ] ; then
   aws s3 sync . ${S3_BUKKET_NAME} \
     --delete \
     --size-only \
+    --exclude "node_modules/*" \
+    --exclude "biome.json" \
+    --exclude "package.json" \
+    --exclude "package-lock.json" \
+    --exclude "tests/*" \
     --exclude ".git/*" \
     --exclude ".env.example" \
     --exclude ".env" \
@@ -49,6 +54,11 @@ if [ -d "${BASE_DIR}" ] ; then
       aws s3 sync . ${S3_BUKKET_NAME} \
         --delete \
         --size-only \
+        --exclude "node_modules/*" \
+        --exclude "biome.json" \
+        --exclude "package.json" \
+        --exclude "package-lock.json" \
+        --exclude "tests/*" \
         --exclude ".git/*" \
         --exclude ".env.example" \
         --exclude ".env" \

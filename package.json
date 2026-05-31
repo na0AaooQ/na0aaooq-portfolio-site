@@ -1,0 +1,26 @@
+{
+  "name": "na0aaooq-portfolio-site",
+  "version": "0.1.0",
+  "description": "na0AaooQ(青木直之)のポートフォリオサイトのソースコード管理リポジトリ",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "test": "node tests/html-structure.test.js && node tests/assets-data.test.js && node tests/links-and-assets.test.js",
+    "lint": "biome lint .",
+    "format": "biome format --write .",
+    "format:check": "biome format .",
+    "check:syntax": "node --check assets/js/index.js && node --check assets/js/contact.js && node --check assets/js/image-modal.js && node --check assets/js/site-header.js && node --check assets/news.js && node --check assets/products.js && node --check assets/data/news-data.js && node --check assets/data/products-data.js && node --check assets/data/en/products-data.js && node --check tests/html-structure.test.js && node --check tests/assets-data.test.js && node --check tests/links-and-assets.test.js",
+    "check": "npm run check:syntax && npm test && npm run lint && npm run format:check"
+  },
+  "keywords": [
+    "portfolio",
+    "static-site",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "Naohisa Aoki",
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.16"
+  }
+}

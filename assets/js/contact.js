@@ -236,14 +236,14 @@
         },
         body: JSON.stringify(data)
       });
-    } catch (error) {
+    } catch (_error) {
       throw new Error(messages.networkError);
     }
 
     let result = {};
     try {
       result = await response.json();
-    } catch (error) {
+    } catch (_error) {
       result = {};
     }
 

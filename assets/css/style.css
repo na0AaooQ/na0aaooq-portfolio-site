@@ -1664,11 +1664,13 @@ html[lang="ja"] .business-info-card .section-heading p {
 .product-card h3 {
   margin-bottom: 16px;
   line-height: 1.5;
+  overflow-wrap: anywhere;
 }
 
 .card p,
 .product-card p {
   line-height: 1.85;
+  overflow-wrap: anywhere;
 }
 
 .card-link {

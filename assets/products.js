@@ -97,7 +97,7 @@
         html +=     '<p>' + escapeHtml(item.description) + '</p>';
 
         if (item.detailUrl) {
-            html += renderLink(item.detailUrl, labels.detailLabel, false);
+            html += renderLink(item.detailUrl, labels.detailLabel, item.detailTargetBlank === true);
         }
 
         if (item.infoUrl && item.infoLabel) {

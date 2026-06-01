@@ -1,12 +1,13 @@
 # na0aaooq-portfolio-site
 
-na0AaooQ(青木直之)のポートフォリオサイトのソースコード  
+na0AaooQ(青木直之)のポートフォリオサイトのソースコード管理リポジトリです。  
 
 個人開発のポートフォリオサイト用リポジトリです。  
 公開中のポートフォリオサイト本体の HTML / CSS / JavaScript、および関連する静的ファイルを管理しています。
+本サイトは日本語版、英語版に対応しております。  
 
-- 公開URL: https://portfolio.na0aaooq.com/
-- Repository: https://github.com/na0AaooQ/na0aaooq-portfolio-site
+- 公開URL: [https://portfolio.na0aaooq.com/](https://portfolio.na0aaooq.com/)
+- GitHubリポジトリURL: [https://github.com/na0AaooQ/na0aaooq-portfolio-site](https://github.com/na0AaooQ/na0aaooq-portfolio-site)
 
 ---
 

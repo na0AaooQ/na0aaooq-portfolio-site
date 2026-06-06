@@ -1,5 +1,13 @@
 window.NEWS_ITEMS = [
     {
+        id: "20260606-kotoba-uke-mimamori-update",
+        date: "2026-06-06",
+        title: "「プロダクト一覧」の「ことばうけみまもり」のサービス掲載情報を更新しました。",
+        summary: "「プロダクト一覧」の「ことばうけみまもり｜Xことばに心のワンクッション」ベータ版公開に伴い、紹介資料、公開ページを更新しました。",
+        url: "/news.html#20260606-kotoba-uke-mimamori-update",
+        published: true
+    },
+    {
         id: "20260531-kotoba-uke-mimamori-update",
         date: "2026-05-31",
         title: "「ことばうけみまもり」のサービス説明資料や詳細情報を追加しました。",

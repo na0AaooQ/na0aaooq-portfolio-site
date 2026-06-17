@@ -1,5 +1,13 @@
 window.NEWS_ITEMS = [
     {
+        id: "20260617-kotoba-uke-mimamori-official-release",
+        date: "2026-06-17",
+        title: "プロダクト「ことばうけみまもり」の正式版をリリースしました。",
+        summary: "プロダクト「ことばうけみまもり｜Xことばに心のワンクッション」のベータテストが完了し、正式版として、Google Chrome ウェブストアへリリース・公開しました。",
+        url: "/news.html#20260617-kotoba-uke-mimamori-official-release",
+        published: true
+    },
+    {
         id: "20260606-kotoba-uke-mimamori-update",
         date: "2026-06-06",
         title: "「プロダクト一覧」の「ことばうけみまもり」のサービス掲載情報を更新しました。",

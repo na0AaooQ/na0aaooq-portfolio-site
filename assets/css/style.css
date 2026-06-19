@@ -1910,7 +1910,9 @@ html[lang="ja"] .business-info-card .section-heading p {
     display: inline-block;
     line-height: 0;
     margin: 0;
+    max-width: 100%;
     padding: 0;
+    width: 100%;
 }
 
 .product-card__image-button img {

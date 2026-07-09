@@ -1,5 +1,15 @@
 window.NEWS_ITEMS = [
     {
+        id: "20260709-portfolio-site-update",
+        date: "2026-07-09",
+        title: "「トップページ」「開発者について」ページ等に「こころみまもり」を追記、自己紹介等を更新しました。",
+        summary: "「トップページ「開発者について」「プロダクト一覧」「お知らせページ」に「こころみまもり」の事を追記、自己紹介等を更新しました。",
+        url: "/news.html#20260709-portfolio-site-update",
+        relatedUrl: "about.html",
+        relatedLabel: "関連ページを見る",
+        published: true
+    },
+    {
         id: "20260617-kotoba-uke-mimamori-official-release",
         date: "2026-06-17",
         title: "プロダクト「ことばうけみまもり」の正式版をリリースしました。",

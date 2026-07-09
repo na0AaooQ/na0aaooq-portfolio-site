@@ -12,6 +12,7 @@
             return {
                 emptyMessage: "There are currently no products to display.",
                 detailLabel: "Learn more",
+                videoLabel: "Watch service video",
                 externalLabel: "View public page",
                 defaultImageAltSuffix: " image",
                 getImageZoomLabel: function (imageAlt) {
@@ -23,6 +24,7 @@
         return {
             emptyMessage: "現在、表示できるプロダクトはありません。",
             detailLabel: "詳しく見る",
+            videoLabel: "サービス紹介動画を見る",
             externalLabel: "公開ページを見る",
             defaultImageAltSuffix: "のイメージ画像",
             getImageZoomLabel: function (imageAlt) {
@@ -104,6 +106,10 @@
             html += renderLink(item.infoUrl, item.infoLabel, item.infoTargetBlank === true);
         }
 
+        if (item.videoUrl) {
+            html += renderLink(item.videoUrl, item.videoLabel || labels.videoLabel, item.videoTargetBlank !== false);
+        }
+
         if (showExternalLink && item.externalUrl) {
             html += renderLink(item.externalUrl, labels.externalLabel, true);
         }
@@ -135,7 +141,7 @@
         var html = items.map(function (item) {
             return renderProductCard(item, {
                 headingTag: "h3",
-                showExternalLink: false
+                showExternalLink: true
             });
         }).join("");
 

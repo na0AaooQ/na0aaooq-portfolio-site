@@ -5,6 +5,8 @@ window.NEWS_ITEMS = [
         title: "プロダクト「ことばうけみまもり」の正式版をリリースしました。",
         summary: "プロダクト「ことばうけみまもり｜Xことばに心のワンクッション」のベータテストが完了し、正式版として、Google Chrome ウェブストアへリリース・公開しました。",
         url: "/news.html#20260617-kotoba-uke-mimamori-official-release",
+        relatedUrl: "products.html",
+        relatedLabel: "関連ページを見る",
         published: true
     },
     {
@@ -13,6 +15,8 @@ window.NEWS_ITEMS = [
         title: "「プロダクト一覧」の「ことばうけみまもり」のサービス掲載情報を更新しました。",
         summary: "「プロダクト一覧」の「ことばうけみまもり｜Xことばに心のワンクッション」ベータ版公開に伴い、紹介資料、公開ページを更新しました。",
         url: "/news.html#20260606-kotoba-uke-mimamori-update",
+        relatedUrl: "products.html",
+        relatedLabel: "関連ページを見る",
         published: true
     },
     {
@@ -21,6 +25,8 @@ window.NEWS_ITEMS = [
         title: "「ことばうけみまもり」のサービス説明資料や詳細情報を追加しました。",
         summary: "「プロダクト一覧」に「ことばうけみまもり｜Xことばに心のワンクッション」のアイコン画像、紹介資料、公開ページへのリンクを追加しました。",
         url: "/news.html#20260531-kotoba-uke-mimamori-update",
+        relatedUrl: "products.html",
+        relatedLabel: "関連ページを見る",
         published: true
     },
     {
@@ -29,6 +35,8 @@ window.NEWS_ITEMS = [
         title: "「開発者について」と「プロダクト一覧」を更新しました。",
         summary: "「開発者について」にこころみまもりくんの紹介、挨拶動画、こころみまもりのイメージイラストを追加しました。また、「プロダクト一覧」に「ことばうけみまもり｜Xことばに心のワンクッション」を追加しました。",
         url: "/news.html#20260513-kokoro-mimamori-kun-update",
+        relatedUrl: "products.html",
+        relatedLabel: "関連ページを見る",
         published: true
     },
     {
@@ -37,6 +45,8 @@ window.NEWS_ITEMS = [
         title: "「プロダクト一覧」の検討中のプロダクト情報を更新しました。",
         summary: "検討中のプロダクト掲載情報を更新しました。「しょくばみまもり」等の情報を追記しました。",
         url: "/news.html#20260502-business-info-update",
+        relatedUrl: "products.html",
+        relatedLabel: "関連ページを見る",
         published: true
     },
     {
@@ -45,6 +55,8 @@ window.NEWS_ITEMS = [
         title: "「プロダクト一覧」画面に「こめんとみまもり」のコンセプト資料を掲載しました。",
         summary: "「こめんとみまもり｜配信コメント安心フィルター」のサービスコンセプト資料を掲載しました。",
         url: "/news.html#20260423-business-info-update",
+        relatedUrl: "products.html",
+        relatedLabel: "関連ページを見る",
         published: true
     },
     {
@@ -53,6 +65,8 @@ window.NEWS_ITEMS = [
         title: "「プロダクト一覧」に各プロダクトの紹介資料等を掲載しました。",
         summary: "「プロダクト一覧」に各プロダクトのサービス説明、紹介資料を掲載しました。",
         url: "/news.html#20260422-business-info-update",
+        relatedUrl: "products.html",
+        relatedLabel: "関連ページを見る",
         published: true
     },
     {
@@ -61,6 +75,8 @@ window.NEWS_ITEMS = [
         title: "プロダクト「がぞうみまもり」の正式版をリリースしました。",
         summary: "プロダクト「がぞうみまもり｜Xセンシティブ画像フィルター」のベータテストが完了し、正式版として、Google Chrome ウェブストアへリリース・公開しました。",
         url: "/news.html#20260421-business-info-update",
+        relatedUrl: "products.html",
+        relatedLabel: "関連ページを見る",
         published: true
     },
     {

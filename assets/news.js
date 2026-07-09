@@ -32,6 +32,24 @@
         return dateString.replace(/-/g, ".");
     }
 
+    function getRelatedLinkLabel() {
+        return document.documentElement.lang === "en" ? "View related page" : "関連ページを見る";
+    }
+
+    function renderRelatedLink(item) {
+        if (!item.relatedUrl) {
+            return "";
+        }
+
+        return (
+            '<p class="news-item__related">' +
+                '<a href="' + escapeHtml(item.relatedUrl) + '" target="_blank" rel="noopener">' +
+                    escapeHtml(item.relatedLabel || getRelatedLinkLabel()) +
+                '</a>' +
+            '</p>'
+        );
+    }
+
     function renderTopNews(containerId, limit) {
         var container = document.getElementById(containerId);
         if (!container) {
@@ -52,6 +70,7 @@
                         '<h3 class="news-item__title">' + escapeHtml(item.title) + '</h3>' +
                         '<p class="news-item__summary">' + escapeHtml(item.summary) + '</p>' +
                     '</a>' +
+                    renderRelatedLink(item) +
                 '</article>'
             );
         }).join("");
@@ -79,6 +98,7 @@
                         '<h2 class="news-item__title">' + escapeHtml(item.title) + '</h2>' +
                         '<p class="news-item__summary">' + escapeHtml(item.summary) + '</p>' +
                     '</a>' +
+                    renderRelatedLink(item) +
                 '</article>'
             );
         }).join("");

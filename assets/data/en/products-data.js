@@ -24,7 +24,7 @@ window.PRODUCT_ITEMS = [
         sortOrder: 20,
         status: "Available",
         name: "Gazou Mimamori",
-        catch: "Sensitive image filter for X",
+        catch: "X Sensitive Image Filter",
         description: "A product that aims to reduce accidental exposure to sensitive images in X direct messages and timelines, helping users browse information with greater peace of mind.",
         detailUrl: "products.html#gazo-mimamori",
         infoUrl: "../assets/pdf/gazo-mimamori-introduction.pdf",
@@ -123,8 +123,42 @@ window.PRODUCT_ITEMS = [
         published: true
     },
     {
-        id: "workplace-various-harassment-protect",
+        id: "inquiry-mimamori",
         sortOrder: 70,
+        status: "Under Consideration",
+        name: "Inquiry Mimamori",
+        catch: "By streamlining the customer service process, we aim to alleviate mental stress and protect our customers from aggressive language and customer harassment contained within inquiries.",
+        description: "Under consideration.",
+        detailUrl: "",
+        infoUrl: "",
+        infoLabel: "",
+        infoTargetBlank: false,
+        externalUrl: "",
+        imageSrc: "",
+        imageAlt: "",
+        featured: false,
+        published: true
+    },
+    {
+        id: "goiken-mimamori",
+        sortOrder: 80,
+        status: "Under Consideration",
+        name: "Goiken Mimamori",
+        catch: "A service that translates the essence and underlying sentiments of slanderous or aggressive behavior into constructive opinions and proposals, conveys them to the appropriate channels—rather than engaging in personal attacks—and monitors the outcome.",
+        description: "Under consideration.",
+        detailUrl: "",
+        infoUrl: "",
+        infoLabel: "",
+        infoTargetBlank: false,
+        externalUrl: "",
+        imageSrc: "",
+        imageAlt: "",
+        featured: false,
+        published: true
+    },
+    {
+        id: "workplace-various-harassment-protect",
+        sortOrder: 90,
         status: "Under Consideration",
         name: "Workplace Mimamori",
         catch: "Preventing workplace harassment, including power harassment, sexual harassment, maternity harassment, and aggressive behavior",
@@ -141,7 +175,7 @@ window.PRODUCT_ITEMS = [
     },
     {
         id: "kotoba-business-pressure",
-        sortOrder: 80,
+        sortOrder: 100,
         status: "Under Consideration",
         name: "Kotoba Mimamori",
         catch: "Preventing aggressive behavior based on superior positions in work or business relationships",
@@ -158,7 +192,7 @@ window.PRODUCT_ITEMS = [
     },
     {
         id: "kotoba-school-bullying",
-        sortOrder: 90,
+        sortOrder: 110,
         status: "Under Consideration",
         name: "Kotoba Mimamori",
         catch: "Preventing bullying and aggressive behavior in schools",
@@ -175,7 +209,7 @@ window.PRODUCT_ITEMS = [
     },
     {
         id: "kotoba-community-attack",
-        sortOrder: 100,
+        sortOrder: 120,
         status: "Under Consideration",
         name: "Kotoba Mimamori",
         catch: "Preventing aggressive behavior by multiple people toward one person within various communities",
@@ -192,7 +226,7 @@ window.PRODUCT_ITEMS = [
     },
     {
         id: "kotoba-structure-analysis",
-        sortOrder: 110,
+        sortOrder: 130,
         status: "Under Consideration",
         name: "Kotoba Mimamori",
         catch: "Analyzing and visualizing word tendencies to reveal the causes and structures behind harmful communication",
@@ -209,7 +243,7 @@ window.PRODUCT_ITEMS = [
     },
     {
         id: "kokoro-mental-visualization",
-        sortOrder: 120,
+        sortOrder: 140,
         status: "Under Consideration",
         name: "Kokoro Mimamori",
         catch: "Visualizing psychological damage caused by words and communication",
@@ -226,7 +260,7 @@ window.PRODUCT_ITEMS = [
     },
     {
         id: "kokoro-support-service",
-        sortOrder: 130,
+        sortOrder: 150,
         status: "Under Consideration",
         name: "Kokoro Mimamori",
         catch: "A service that gently supports people whose hearts have been hurt by careless words or communication",
@@ -243,7 +277,7 @@ window.PRODUCT_ITEMS = [
     },
     {
         id: "kokoro-training-program",
-        sortOrder: 140,
+        sortOrder: 160,
         status: "Under Consideration",
         name: "Kokoro Mimamori",
         catch: "A training program for people who use aggressive language, helping them learn empathy and consideration for others together with the developer",
@@ -260,7 +294,7 @@ window.PRODUCT_ITEMS = [
     },
     {
         id: "kokoro-management-report",
-        sortOrder: 150,
+        sortOrder: 170,
         status: "Under Consideration",
         name: "Kokoro Mimamori",
         catch: "Providing improvement reports and plans for executives and managers on management and reputation risks caused by communication issues",
@@ -277,7 +311,7 @@ window.PRODUCT_ITEMS = [
     },
     {
         id: "kokoro-society-report",
-        sortOrder: 160,
+        sortOrder: 180,
         status: "Under Consideration",
         name: "Kokoro Mimamori",
         catch: "Providing improvement reports and plans for society and political leaders on risks that words and communication may pose to public life and governance",

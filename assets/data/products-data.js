@@ -114,8 +114,36 @@ window.PRODUCT_ITEMS = [
         published: true
     },
     {
-        id: "workplace-various-harassment-protect",
+        id: "inquiry-mimamori",
         sortOrder: 70,
+        status: "検討中",
+        name: "おといあわせみまもり",
+        catch: "お問い合わせ対応の業務効率化による心的負担の緩和、お問い合わせの中に含まれる攻撃的言動やカスタマーハラスメントから心を守る",
+        description: "検討中。",
+        detailUrl: "products.html#inquiry-mimamori",
+        externalUrl: "",
+        imageSrc: "",
+        imageAlt: "",
+        featured: false,
+        published: true
+    },
+    {   
+        id: "goiken-mimamori",
+        sortOrder: 80,
+        status: "検討中",
+        name: "ごいけんみまもり",
+        catch: "誹謗中傷や攻撃的な言動の本質、根底にある思いについて、建設的な意見・提案として表現し、個人攻撃ではなく適切な窓口へ伝え、結果を見守るサービス",
+        description: "検討中。",
+        detailUrl: "products.html#goiken-mimamori",
+        externalUrl: "", 
+        imageSrc: "",
+        imageAlt: "", 
+        featured: false,
+        published: true
+    },
+    {
+        id: "workplace-various-harassment-protect",
+        sortOrder: 90,
         status: "検討中",
         name: "しょくばみまもり",
         catch: "職場のパワハラ・セクハラ・マタハラ等のハラスメント、攻撃的言動を防止する",
@@ -129,7 +157,7 @@ window.PRODUCT_ITEMS = [
     },
     {
         id: "kotoba-business-pressure",
-        sortOrder: 80,
+        sortOrder: 100,
         status: "検討中",
         name: "ことばみまもり",
         catch: "仕事や取引関係における優越的立場を背景とした、攻撃的言動を防止する",
@@ -143,7 +171,7 @@ window.PRODUCT_ITEMS = [
     },
     {
         id: "kotoba-school-bullying",
-        sortOrder: 90,
+        sortOrder: 110,
         status: "検討中",
         name: "ことばみまもり",
         catch: "学校内のいじめや攻撃的言動を防止する",
@@ -157,7 +185,7 @@ window.PRODUCT_ITEMS = [
     },
     {
         id: "kotoba-community-attack",
-        sortOrder: 100,
+        sortOrder: 120,
         status: "検討中",
         name: "ことばみまもり",
         catch: "さまざまなコミュニティ内における、複数人から一人に対する攻撃的言動を防止する",
@@ -171,7 +199,7 @@ window.PRODUCT_ITEMS = [
     },
     {
         id: "kotoba-structure-analysis",
-        sortOrder: 110,
+        sortOrder: 130,
         status: "検討中",
         name: "ことばみまもり",
         catch: "言葉の傾向を分析・可視化し、言葉の発生原因と構造を可視化する",
@@ -185,7 +213,7 @@ window.PRODUCT_ITEMS = [
     },
     {
         id: "kokoro-mental-visualization",
-        sortOrder: 120,
+        sortOrder: 140,
         status: "検討中",
         name: "こころみまもり",
         catch: "言葉やコミュニケーションによる、心理的なダメージを可視化する",
@@ -199,7 +227,7 @@ window.PRODUCT_ITEMS = [
     },
     {
         id: "kokoro-support-service",
-        sortOrder: 130,
+        sortOrder: 150,
         status: "検討中",
         name: "こころみまもり",
         catch: "心無い言葉やコミュニケーションで心が傷ついてしまった方へ、寄り添い、支えるサービス",
@@ -213,7 +241,7 @@ window.PRODUCT_ITEMS = [
     },
     {
         id: "kokoro-training-program",
-        sortOrder: 140,
+        sortOrder: 160,
         status: "検討中",
         name: "こころみまもり",
         catch: "攻撃的言動をする方に向けて、心・技・体を開発者とともに鍛え、人の痛みや心を慮ることを、一緒に学んでいただく鍛錬プログラム",
@@ -227,7 +255,7 @@ window.PRODUCT_ITEMS = [
     },
     {
         id: "kokoro-management-report",
-        sortOrder: 150,
+        sortOrder: 170,
         status: "検討中",
         name: "こころみまもり",
         catch: "経営者・管理職等のみなさまに向けて、言葉やコミニュケーションのリスクによる、経営リスクやレビテーションリスク等、改善レポートと改善計画を提供する",
@@ -241,7 +269,7 @@ window.PRODUCT_ITEMS = [
     },
     {
         id: "kokoro-society-report",
-        sortOrder: 160,
+        sortOrder: 180,
         status: "検討中",
         name: "こころみまもり",
         catch: "社会・政治家のみなさまに向けて、言葉やコミュニケーションのリスクによる、国政や国民生活に与えるリスク、改善レポートと改善計画を提供する",

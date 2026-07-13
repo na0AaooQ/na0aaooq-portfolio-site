@@ -1,5 +1,15 @@
 window.NEWS_ITEMS = [
     {
+        id: "20260713-kokoro-mimamori-chan-update",
+        date: "2026-07-13",
+        title: "「開発者について」ページに「こころみまもりちゃん」の紹介を追加しました。",
+        summary: "「こころみまもり」のシンボルキャラクターとして、「こころみまもりちゃん」の説明、画像、ご挨拶動画を追加しました。あわせて、「こころみまもりくん」のご挨拶動画をYouTube版へ更新しました。",
+        url: "/news.html#20260713-kokoro-mimamori-chan-update",
+        relatedUrl: "about.html",
+        relatedLabel: "関連ページを見る",
+        published: true
+    },
+    {
         id: "20260709-portfolio-site-update",
         date: "2026-07-09",
         title: "「トップページ」「開発者について」ページ等に「こころみまもり」を追記、自己紹介等を更新しました。",

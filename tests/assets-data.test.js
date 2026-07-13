@@ -142,6 +142,12 @@ test('news data has required fields and local references', () => {
   assertNewsItems(newsItems);
 });
 
+test('English news data has required fields and local references', () => {
+  const newsItems = loadWindowArray('assets/data/en/news-data.js', 'NEWS_ITEMS');
+
+  assertNewsItems(newsItems);
+});
+
 test('product data has required fields and aligned Japanese/English ids', () => {
   const japaneseProducts = loadWindowArray('assets/data/products-data.js', 'PRODUCT_ITEMS');
   const englishProducts = loadWindowArray('assets/data/en/products-data.js', 'PRODUCT_ITEMS');

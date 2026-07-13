@@ -199,6 +199,23 @@ test('About pages provide aligned Nanahoshi supporter artwork', () => {
       'the new illustration should precede the related note articles'
     );
 
+    for (const illustrationFileName of [originalIllustrationFileName, imageFileName]) {
+      const imageIndex = html.indexOf(illustrationFileName);
+      const buttonStartIndex = html.lastIndexOf('<button', imageIndex);
+      const buttonEndIndex = html.indexOf('</button>', imageIndex);
+
+      assert.ok(imageIndex >= 0, `${illustrationFileName} should be present`);
+      assert.ok(buttonStartIndex >= 0, `${illustrationFileName} should be in a button`);
+      assert.ok(
+        buttonEndIndex > imageIndex,
+        `${illustrationFileName} button should close after image`
+      );
+      assert.ok(
+        html.slice(buttonStartIndex, buttonEndIndex).includes('data-image-modal-trigger'),
+        `${illustrationFileName} should open the existing image modal`
+      );
+    }
+
     const ids = getAttributeValues(html, 'id').filter(Boolean);
     assert.equal(
       new Set(ids).size,

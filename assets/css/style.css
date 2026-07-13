@@ -1049,6 +1049,24 @@ html[lang="ja"] .business-info-card .section-heading p {
   align-items: center;
 }
 
+.kokoro-illustration-image-button {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 16px;
+  cursor: zoom-in;
+  line-height: 0;
+}
+
+.kokoro-illustration-image-button:focus-visible {
+  outline: 3px solid #2f7d6e;
+  outline-offset: 6px;
+}
+
 .kokoro-illustration-card img {
   width: 100%;
   max-width: 360px;

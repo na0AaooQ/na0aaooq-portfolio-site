@@ -152,6 +152,79 @@ for (const page of HTML_PAGES) {
   });
 }
 
+test('About pages provide aligned Nanahoshi supporter artwork', () => {
+  const japaneseAboutPage = readHtml('about.html');
+  const englishAboutPage = readHtml('en/about.html');
+  const imageFileName = 'kokoro-mimamori-kun-chan-close-friends.png';
+  const originalIllustrationFileName = 'kokoro-mimamori-illustration.jpg';
+  const originalPostUrl = 'https://x.com/nana_uranai/status/2075578479094153224';
+  const profileUrl = 'https://x.com/nana_uranai';
+  const noteSection = '<section class="note-articles-section">';
+
+  assert.ok(japaneseAboutPage.includes('<h3>応援イラスト</h3>'));
+  assert.ok(
+    japaneseAboutPage.includes(
+      '「こころみまもり」の活動を応援してくださっている方々からいただいたイラストをご紹介します。'
+    )
+  );
+  assert.ok(englishAboutPage.includes('<h3>Supporter Artwork</h3>'));
+  assert.ok(
+    englishAboutPage.includes(
+      'Here are illustrations kindly created by people who support the Kokoro Mimamori initiative.'
+    )
+  );
+
+  assert.ok(japaneseAboutPage.includes(`src="assets/img/kokoro-mimamori/${imageFileName}"`));
+  assert.ok(englishAboutPage.includes(`src="../assets/img/kokoro-mimamori/${imageFileName}"`));
+  assert.ok(
+    japaneseAboutPage.includes(
+      'alt="「こころみまもりくん」と「こころみまもりちゃん」が仲良く手をつないでいる手描きイラスト"'
+    )
+  );
+  assert.ok(
+    englishAboutPage.includes(
+      'alt="Hand-drawn illustration of Kokoro Mimamori-kun and Kokoro Mimamori-chan holding hands as close friends"'
+    )
+  );
+
+  for (const html of [japaneseAboutPage, englishAboutPage]) {
+    assert.ok(html.includes(`href="${originalPostUrl}"`));
+    assert.ok(html.includes(`href="${profileUrl}"`));
+    assert.ok(
+      html.indexOf(originalIllustrationFileName) < html.indexOf(imageFileName),
+      'the new illustration should follow the existing illustration'
+    );
+    assert.ok(
+      html.indexOf(imageFileName) < html.indexOf(noteSection),
+      'the new illustration should precede the related note articles'
+    );
+
+    for (const illustrationFileName of [originalIllustrationFileName, imageFileName]) {
+      const imageIndex = html.indexOf(illustrationFileName);
+      const buttonStartIndex = html.lastIndexOf('<button', imageIndex);
+      const buttonEndIndex = html.indexOf('</button>', imageIndex);
+
+      assert.ok(imageIndex >= 0, `${illustrationFileName} should be present`);
+      assert.ok(buttonStartIndex >= 0, `${illustrationFileName} should be in a button`);
+      assert.ok(
+        buttonEndIndex > imageIndex,
+        `${illustrationFileName} button should close after image`
+      );
+      assert.ok(
+        html.slice(buttonStartIndex, buttonEndIndex).includes('data-image-modal-trigger'),
+        `${illustrationFileName} should open the existing image modal`
+      );
+    }
+
+    const ids = getAttributeValues(html, 'id').filter(Boolean);
+    assert.equal(
+      new Set(ids).size,
+      ids.length,
+      'About page should not include duplicate id attributes'
+    );
+  }
+});
+
 test('English top page provides products and news previews in the Japanese top page sequence', () => {
   const englishTopPage = readHtml('en/index.html');
   const productsIndex = englishTopPage.indexOf('<h2>Products</h2>');

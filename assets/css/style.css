@@ -1026,11 +1026,45 @@ html[lang="ja"] .business-info-card .section-heading p {
   margin-top: 8px;
 }
 
+.kokoro-illustration-heading {
+  color: var(--text-soft);
+}
+
+.kokoro-illustration-heading h3 {
+  margin-bottom: 12px;
+  color: var(--text-strong);
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.kokoro-illustration-heading p {
+  margin-bottom: 0;
+  line-height: 1.9;
+}
+
 .kokoro-illustration-card {
   display: grid;
   grid-template-columns: minmax(260px, 360px) minmax(0, 1fr);
   gap: 24px;
   align-items: center;
+}
+
+.kokoro-illustration-image-button {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 16px;
+  cursor: zoom-in;
+  line-height: 0;
+}
+
+.kokoro-illustration-image-button:focus-visible {
+  outline: 3px solid #2f7d6e;
+  outline-offset: 6px;
 }
 
 .kokoro-illustration-card img {

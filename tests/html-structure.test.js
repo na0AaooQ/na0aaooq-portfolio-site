@@ -151,3 +151,47 @@ for (const page of HTML_PAGES) {
     assertLocalCssAndJsReferencesExist(html, page.path);
   });
 }
+
+test('English top page provides products and news previews in the Japanese top page sequence', () => {
+  const englishTopPage = readHtml('en/index.html');
+  const productsIndex = englishTopPage.indexOf('<h2>Products</h2>');
+  const aboutIndex = englishTopPage.indexOf('<h2>About the Developer</h2>');
+  const newsIndex = englishTopPage.indexOf('<h2>News</h2>');
+
+  assert.ok(productsIndex >= 0, 'en/index.html should include a Products section');
+  assert.ok(aboutIndex >= 0, 'en/index.html should include an About the Developer section');
+  assert.ok(newsIndex >= 0, 'en/index.html should include a News section');
+  assert.ok(productsIndex < aboutIndex, 'Products should appear before About the Developer');
+  assert.ok(aboutIndex < newsIndex, 'About the Developer should appear before News');
+  assert.ok(
+    englishTopPage.includes('id="top-products-list"'),
+    'en/index.html should include the top products list'
+  );
+  assert.ok(
+    englishTopPage.includes('id="top-news-list"'),
+    'en/index.html should include the top news list'
+  );
+  assert.ok(
+    englishTopPage.includes(
+      'href="products.html" class="button button-secondary">View all products'
+    ),
+    'en/index.html should link to all products'
+  );
+  assert.ok(
+    englishTopPage.includes('href="news.html" class="button button-secondary">View all news'),
+    'en/index.html should link to all news'
+  );
+  assert.doesNotMatch(
+    englishTopPage,
+    /<h2>Selected Work<\/h2>/,
+    'en/index.html should not retain the Selected Work section'
+  );
+  assert.ok(
+    englishTopPage.includes('../assets/data/en/products-data.js'),
+    'en/index.html should load English product data'
+  );
+  assert.ok(
+    englishTopPage.includes('../assets/data/en/news-data.js'),
+    'en/index.html should load English news data'
+  );
+});

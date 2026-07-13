@@ -248,31 +248,17 @@
     <section class="products-preview">
       <div class="container section-inner">
         <div class="section-heading">
-          <h2>Selected Work</h2>
+          <h2>Products</h2>
           <p>
             Here you can find the products and projects I have been building,
             with a focus on safety, communication, and thoughtful system design.
           </p>
         </div>
 
-        <div class="product-cards">
-          <article class="card">
-            <h3>Products and ongoing work</h3>
-            <p>
-              Explore the projects I am developing, including tools designed to reduce
-              communication risk and support healthier online interaction.
-            </p>
-            <a href="products.html" class="card-link">View products</a>
-          </article>
+        <div id="top-products-list" class="product-cards"></div>
 
-          <article class="card">
-            <h3>Updates and development notes</h3>
-            <p>
-              See recent updates, progress notes, and announcements related to my
-              portfolio site and personal development work.
-            </p>
-            <a href="news.html" class="card-link">View news</a>
-          </article>
+        <div class="section-action">
+          <a href="products.html" class="button button-secondary">View all products</a>
         </div>
       </div>
     </section>
@@ -293,6 +279,24 @@
             that help people feel safer, less isolated, and better supported in digital spaces.
           </p>
           <a href="about.html" class="card-link">Learn more about me</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="news-preview">
+      <div class="container section-inner">
+        <div class="section-heading">
+          <h2>News</h2>
+          <p>
+            Here you can find selected updates about site improvements,
+            product progress, and related development work.
+          </p>
+        </div>
+
+        <div id="top-news-list" class="news-list"></div>
+
+        <div class="section-action">
+          <a href="news.html" class="button button-secondary">View all news</a>
         </div>
       </div>
     </section>
@@ -333,6 +337,10 @@
   </footer>
 
   <script src="../assets/js/index.js"></script>
+  <script src="../assets/data/en/news-data.js?v=20260713"></script>
+  <script src="../assets/news.js"></script>
+  <script src="../assets/data/en/products-data.js"></script>
+  <script src="../assets/products.js"></script>
   <script src="../assets/js/site-header.js"></script>
 </body>
 </html>

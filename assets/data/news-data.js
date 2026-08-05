@@ -1,5 +1,15 @@
 window.NEWS_ITEMS = [
     {
+        id: "20260728-kumamoto-info",
+        date: "2026-07-28",
+        title: "令和8年熊本地震により被災された皆様へ",
+        summary: "令和8年熊本地震により被災された皆様、ならびにご家族・関係者の皆様に、心よりお見舞い申し上げます。皆様の安全と被災地の一日も早い復興を心よりお祈り申し上げます。",
+        url: "/news.html#20260728-kumamoto-info",
+        relatedUrl: "",
+        relatedLabel: "",
+        published: true
+    },
+    {
         id: "20260713-kokoro-mimamori-chan-update",
         date: "2026-07-13",
         title: "「開発者について」ページに「こころみまもりちゃん」の紹介を追加しました。",

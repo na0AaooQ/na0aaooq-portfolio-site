@@ -1,5 +1,15 @@
 window.NEWS_ITEMS = [
     {
+        id: "20260728-kumamoto-info",
+        date: "2026-07-28",
+        title: "To everyone affected by the 2026 Kumamoto Earthquake",
+        summary: "We extend our heartfelt sympathies to everyone affected by the Kumamoto Earthquake, as well as to their families and all those concerned. We sincerely pray for everyone's safety and for the earliest possible recovery of the affected areas.",
+        url: "/news.html#20260728-kumamoto-info",
+        relatedUrl: "",
+        relatedLabel: "",
+        published: true
+    },
+    {
         id: "20260713-kokoro-mimamori-chan-update",
         date: "2026-07-13",
         title: "Added an introduction to “Kokoro Mimamori-chan” to the About page.",

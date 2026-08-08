@@ -378,6 +378,21 @@ body.is-page-loading {
   display: inline;
 }
 
+html[lang="ja"] .hero-title {
+  width: 100%;
+  max-width: none;
+}
+
+html[lang="ja"] .hero-title span {
+  display: block;
+}
+
+@media (min-width: 769px) {
+  html[lang="ja"] .hero-title span {
+    white-space: nowrap;
+  }
+}
+
 .hero-text {
   max-width: 42rem;
   margin: 0 auto;

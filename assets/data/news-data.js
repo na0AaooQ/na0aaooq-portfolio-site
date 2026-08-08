@@ -1,5 +1,15 @@
 window.NEWS_ITEMS = [
     {
+        id: "20260808-portfolio-products-update",
+        date: "2026-08-08",
+        title: "「プロダクト一覧」に「まどぐちみまもり」を追加し、サービス紹介動画へのリンクを追加しました。",
+        summary: "「プロダクト一覧」に「まどぐちみまもり｜熊本県・熊本市の公式情報案内」を追加しました。また、「ことばうけみまもり」と「こめんとみまもり」にサービス紹介動画へのリンクを追加しました。",
+        url: "/news.html#20260808-portfolio-products-update",
+        relatedUrl: "products.html",
+        relatedLabel: "関連ページを見る",
+        published: true
+    },
+    {
         id: "20260728-kumamoto-info",
         date: "2026-07-28",
         title: "令和8年熊本地震により被災された皆様へ",

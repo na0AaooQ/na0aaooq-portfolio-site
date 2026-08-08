@@ -1,5 +1,15 @@
 window.NEWS_ITEMS = [
     {
+        id: "20260808-portfolio-products-update",
+        date: "2026-08-08",
+        title: "Added “Madoguchi Mimamori” to the Products page and added service video links.",
+        summary: "We added “Madoguchi Mimamori | Official Information Guide for Kumamoto Prefecture and Kumamoto City” to the Products page. We also added links to service introduction videos for Kotoba Uke Mimamori and Comment Mimamori.",
+        url: "/en/news.html#20260808-portfolio-products-update",
+        relatedUrl: "products.html",
+        relatedLabel: "View related page",
+        published: true
+    },
+    {
         id: "20260728-kumamoto-info",
         date: "2026-07-28",
         title: "To everyone affected by the 2026 Kumamoto Earthquake",

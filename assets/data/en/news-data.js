@@ -1,5 +1,15 @@
 window.NEWS_ITEMS = [
     {
+        id: "20260813-portfolio-products-update",
+        date: "2026-08-13",
+        title: "We have added a link to the service introduction video under “Madoguchi Mimamori“ to the Products page.",
+        summary: "We have added a link to the service introduction video under “Madoguchi Mimamori | Official Information Guide for Kumamoto Prefecture and Kumamoto City” to the Products page.",
+        url: "/en/news.html#20260813-portfolio-products-update",
+        relatedUrl: "products.html",
+        relatedLabel: "View related page",
+        published: true
+    },
+    {
         id: "20260808-portfolio-products-update",
         date: "2026-08-08",
         title: "Added “Madoguchi Mimamori” to the Products page and added service video links.",
@@ -33,7 +43,7 @@ window.NEWS_ITEMS = [
         id: "20260709-portfolio-site-update",
         date: "2026-07-09",
         title: "Added \"Kokoro Mimamori\" to the \"Top Page,\" \"About the Developer\" page, and others, and updated the self-introduction.\"",
-        summary: "I added information about \"Kokoro Mimamori\" to the top page, \"About the Developer,\" \"Product List,\" and \"News\" page, and updated my self-introduction.",
+        summary: "I added information about \"Kokoro Mimamori\" to the top page, \"About the Developer,\" \"Products page,\" and \"News\" page, and updated my self-introduction.",
         url: "/en/news.html#20260709-portfolio-site-update",
         relatedUrl: "about.html",
         relatedLabel: "View related page",
@@ -82,7 +92,7 @@ window.NEWS_ITEMS = [
     {
         id: "20260502-business-info-update",
         date: "2026-05-02",
-        title: "We have updated the product information under consideration in the \"Product List\".",
+        title: "We have updated the product information under consideration in the \"Products page\".",
         summary: "We have updated the product listings for items under consideration. Information on \"Shokuba Mimamori\" and other products has been added.",
         url: "/en/news.html#20260502-business-info-update",
         relatedUrl: "products.html",
@@ -92,7 +102,7 @@ window.NEWS_ITEMS = [
     {
         id: "20260423-business-info-update",
         date: "2026-04-23",
-        title: "Service Concept document for \"Comment Mimamori | Streaming Comment Safety Filter\" has been added to the \"Product List\" screen.",
+        title: "Service Concept document for \"Comment Mimamori | Streaming Comment Safety Filter\" has been added to the \"Products page\" screen.",
         summary: "We have posted the service concept document for \"Comment Mimamori | Streaming Comment Safety Filter\".",
         url: "/en/news.html#20260423-business-info-update",
         relatedUrl: "products.html",
@@ -102,8 +112,8 @@ window.NEWS_ITEMS = [
     {
         id: "20260422-business-info-update",
         date: "2026-04-22",
-        title: "We have added service descriptions and introductory materials to the \"Products List\" screen.",
-        summary: "We have added service descriptions and introductory materials for each product to the \"Products List\" screen.",
+        title: "We have added service descriptions and introductory materials to the \"Products page\" screen.",
+        summary: "We have added service descriptions and introductory materials for each product to the \"Products page\" screen.",
         url: "/en/news.html#20260422-business-info-update",
         relatedUrl: "products.html",
         relatedLabel: "View related page",

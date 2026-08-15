@@ -1,5 +1,15 @@
 window.NEWS_ITEMS = [
     {
+        id: "20260815-portfolio-products-inquiry-update",
+        date: "2026-08-15",
+        title: "Updated the “Kokoro Mimamori” introduction and contact options for work and media inquiries",
+        summary: "The Products page has been updated with a clearer introduction to “Kokoro Mimamori,” along with a link to the About page for more on the vision and ideas behind the initiative. I have also added a clearer contact path for work, project, media, and interview inquiries. In addition, “Work / Project Inquiries” is now available as a new inquiry type on the Contact page.",
+        url: "/en/news.html#20260815-portfolio-products-inquiry-update",
+        relatedUrl: "products.html",
+        relatedLabel: "View related page",
+        published: true
+    },
+    {
         id: "20260813-portfolio-products-update",
         date: "2026-08-13",
         title: "We have added a link to the service introduction video under “Madoguchi Mimamori“ to the Products page.",

@@ -1,5 +1,15 @@
 window.NEWS_ITEMS = [
     {
+        id: "20260815-portfolio-products-inquiry-update",
+        date: "2026-08-15",
+        title: "「こころみまもり」の紹介と、お仕事・取材のご相談導線を更新しました",
+        summary: "ポートフォリオサイトの「プロダクト一覧」ページを更新し、「こころみまもり」の概要を追加しました。あわせて、目指している世界や取り組みに込めた考えをご覧いただける「開発者について」ページへの導線と、お仕事のご依頼や掲載・取材などについてご相談いただける「お問い合わせ」ページへの導線を整えました。また、「お問い合わせ」ページの「お問い合わせ種別」に「お仕事のご依頼について」を追加しました。",
+        url: "/news.html#20260815-portfolio-products-inquiry-update",
+        relatedUrl: "products.html",
+        relatedLabel: "関連ページを見る",
+        published: true
+    },
+    {
         id: "20260813-portfolio-products-update",
         date: "2026-08-13",
         title: "「プロダクト一覧」の「まどぐちみまもり」にサービス紹介動画へのリンクを追加しました。",

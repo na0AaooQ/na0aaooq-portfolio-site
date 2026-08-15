@@ -268,3 +268,82 @@ test('English top page provides products and news previews in the Japanese top p
     'en/index.html should load English news data'
   );
 });
+
+test('Products pages provide the Kokoro Mimamori explanation and inquiry path before the product list', () => {
+  const japaneseProductsPage = readHtml('products.html');
+  const englishProductsPage = readHtml('en/products.html');
+
+  assert.ok(
+    japaneseProductsPage.includes(
+      '人の心をそっと守る仕組みづくりの一環として、「こころみまもり」シリーズを中心に、アプリやプロダクトを開発しています。'
+    )
+  );
+  assert.ok(
+    japaneseProductsPage.includes(
+      '「こころみまもり」とは、人の心をそっと守るための、やさしいコミュニケーションを支えるアプリ・プロダクトの総称です。'
+    )
+  );
+  assert.ok(japaneseProductsPage.includes('<a href="about.html">開発者について</a>'));
+  assert.ok(
+    japaneseProductsPage.includes(
+      '<a href="contact.html" class="button button-primary products-intro__cta">お仕事・取材のご相談はこちら</a>'
+    )
+  );
+  assert.ok(
+    japaneseProductsPage.indexOf('products-intro-section') <
+      japaneseProductsPage.indexOf('products-list-section')
+  );
+
+  assert.ok(
+    englishProductsPage.includes(
+      'I develop apps and products centered on the “Kokoro Mimamori” series, with the aim of supporting people’s emotional well-being through gentler communication.'
+    )
+  );
+  assert.ok(
+    englishProductsPage.includes(
+      '“Kokoro Mimamori” is the collective name for a series of apps and products designed to support gentler communication and help reduce emotional harm.'
+    )
+  );
+  assert.ok(englishProductsPage.includes('<a href="about.html">About</a>'));
+  assert.ok(
+    englishProductsPage.includes(
+      '<a href="contact.html" class="button button-primary products-intro__cta">Work &amp; Media Inquiries</a>'
+    )
+  );
+  assert.ok(
+    englishProductsPage.indexOf('products-intro-section') <
+      englishProductsPage.indexOf('<section class="section">')
+  );
+});
+
+test('About pages link only the Kokoro Mimamori series name to Products', () => {
+  const japaneseAboutPage = readHtml('about.html');
+  const englishAboutPage = readHtml('en/about.html');
+
+  assert.ok(japaneseAboutPage.includes('<a href="products.html">「こころみまもり」シリーズ</a>'));
+  assert.ok(englishAboutPage.includes('<a href="products.html">“Kokoro Mimamori” series</a>'));
+});
+
+test('Contact pages expose the work inquiry category and the backend allows its value', () => {
+  const japaneseContactPage = readHtml('contact.html');
+  const englishContactPage = readHtml('en/contact.html');
+  const lambdaSource = fs.readFileSync(
+    path.join(ROOT_DIR, 'aws/lambda/portfolio-site-contact-form-lambda/lambda_function.py'),
+    'utf8'
+  );
+
+  assert.ok(
+    japaneseContactPage.includes(
+      '<option value="media">掲載・取材について</option>\n              <option value="work">お仕事のご依頼について</option>\n              <option value="other">その他</option>'
+    )
+  );
+  assert.ok(
+    englishContactPage.includes(
+      '<option value="media">Media / interview</option>\n              <option value="work">Work / Project Inquiries</option>\n              <option value="other">Other</option>'
+    )
+  );
+  assert.match(
+    lambdaSource,
+    /ALLOWED_CATEGORIES = \{"service", "product", "media", "work", "other"\}/
+  );
+});

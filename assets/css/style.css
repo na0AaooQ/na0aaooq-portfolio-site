@@ -749,6 +749,41 @@ section {
   color: #4f605d;
 }
 
+.products-intro-section {
+  background: var(--surface-soft);
+}
+
+.products-intro {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.products-intro .section-heading {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.products-intro > p + p {
+  margin-top: 1em;
+}
+
+.products-intro__about {
+  margin-top: 1.4em;
+}
+
+.products-intro__inquiry {
+  margin-top: 1.4em;
+}
+
+.products-intro__cta {
+  margin-top: 24px;
+}
+
+.products-intro__cta:focus-visible {
+  outline: 3px solid var(--primary-strong);
+  outline-offset: 3px;
+}
+
 /* =========================================
    About
 ========================================= */

@@ -148,6 +148,41 @@ test('English news data has required fields and local references', () => {
   assertNewsItems(newsItems);
 });
 
+test('Japanese and English news data include the 2026-08-15 inquiry path update', () => {
+  const japaneseNews = loadWindowArray('assets/data/news-data.js', 'NEWS_ITEMS');
+  const englishNews = loadWindowArray('assets/data/en/news-data.js', 'NEWS_ITEMS');
+  const japaneseUpdate = japaneseNews.find(
+    (item) => item.id === '20260815-portfolio-products-inquiry-update'
+  );
+  const englishUpdate = englishNews.find(
+    (item) => item.id === '20260815-portfolio-products-inquiry-update'
+  );
+
+  assert.deepEqual(JSON.parse(JSON.stringify(japaneseUpdate)), {
+    id: '20260815-portfolio-products-inquiry-update',
+    date: '2026-08-15',
+    title: '「こころみまもり」の紹介と、お仕事・取材のご相談導線を更新しました',
+    summary:
+      'ポートフォリオサイトの「プロダクト一覧」ページを更新し、「こころみまもり」の概要を追加しました。あわせて、目指している世界や取り組みに込めた考えをご覧いただける「開発者について」ページへの導線と、お仕事のご依頼や掲載・取材などについてご相談いただける「お問い合わせ」ページへの導線を整えました。また、「お問い合わせ」ページの「お問い合わせ種別」に「お仕事のご依頼について」を追加しました。',
+    url: '/news.html#20260815-portfolio-products-inquiry-update',
+    relatedUrl: 'products.html',
+    relatedLabel: '関連ページを見る',
+    published: true
+  });
+  assert.deepEqual(JSON.parse(JSON.stringify(englishUpdate)), {
+    id: '20260815-portfolio-products-inquiry-update',
+    date: '2026-08-15',
+    title:
+      'Updated the “Kokoro Mimamori” introduction and contact options for work and media inquiries',
+    summary:
+      'The Products page has been updated with a clearer introduction to “Kokoro Mimamori,” along with a link to the About page for more on the vision and ideas behind the initiative. I have also added a clearer contact path for work, project, media, and interview inquiries. In addition, “Work / Project Inquiries” is now available as a new inquiry type on the Contact page.',
+    url: '/en/news.html#20260815-portfolio-products-inquiry-update',
+    relatedUrl: 'products.html',
+    relatedLabel: 'View related page',
+    published: true
+  });
+});
+
 test('product data has required fields and aligned Japanese/English ids', () => {
   const japaneseProducts = loadWindowArray('assets/data/products-data.js', 'PRODUCT_ITEMS');
   const englishProducts = loadWindowArray('assets/data/en/products-data.js', 'PRODUCT_ITEMS');

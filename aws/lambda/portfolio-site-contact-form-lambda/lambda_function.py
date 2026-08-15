@@ -24,7 +24,7 @@ RECAPTCHA_VERIFY_URL = os.environ.get(
     "https://www.google.com/recaptcha/api/siteverify"
 )
 
-ALLOWED_CATEGORIES = {"service", "product", "media", "other"}
+ALLOWED_CATEGORIES = {"service", "product", "media", "work", "other"}
 
 BLOCKED_PATTERNS = [
     re.compile(r"<\s*script\b", re.IGNORECASE),

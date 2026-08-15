@@ -776,7 +776,10 @@ section {
 }
 
 .products-intro__cta {
-  margin-top: 24px;
+  display: flex;
+  width: fit-content;
+  max-width: 100%;
+  margin: 24px auto 0;
 }
 
 .products-intro__cta:focus-visible {

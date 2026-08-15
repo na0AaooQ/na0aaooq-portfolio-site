@@ -283,7 +283,11 @@ test('Products pages provide the Kokoro Mimamori explanation and inquiry path be
       '「こころみまもり」とは、人の心をそっと守るための、やさしいコミュニケーションを支えるアプリ・プロダクトの総称です。'
     )
   );
-  assert.ok(japaneseProductsPage.includes('<a href="about.html">開発者について</a>'));
+  assert.ok(
+    japaneseProductsPage.includes(
+      '<a href="about.html" target="_blank" rel="noopener noreferrer">開発者について</a>'
+    )
+  );
   assert.ok(
     japaneseProductsPage.includes(
       '<a href="contact.html" class="button button-primary products-intro__cta">お仕事・取材のご相談はこちら</a>'
@@ -304,7 +308,11 @@ test('Products pages provide the Kokoro Mimamori explanation and inquiry path be
       '“Kokoro Mimamori” is the collective name for a series of apps and products designed to support gentler communication and help reduce emotional harm.'
     )
   );
-  assert.ok(englishProductsPage.includes('<a href="about.html">About</a>'));
+  assert.ok(
+    englishProductsPage.includes(
+      '<a href="about.html" target="_blank" rel="noopener noreferrer">About</a>'
+    )
+  );
   assert.ok(
     englishProductsPage.includes(
       '<a href="contact.html" class="button button-primary products-intro__cta">Work &amp; Media Inquiries</a>'
@@ -320,8 +328,16 @@ test('About pages link only the Kokoro Mimamori series name to Products', () => 
   const japaneseAboutPage = readHtml('about.html');
   const englishAboutPage = readHtml('en/about.html');
 
-  assert.ok(japaneseAboutPage.includes('<a href="products.html">「こころみまもり」シリーズ</a>'));
-  assert.ok(englishAboutPage.includes('<a href="products.html">“Kokoro Mimamori” series</a>'));
+  assert.ok(
+    japaneseAboutPage.includes(
+      '<a href="products.html" target="_blank" rel="noopener noreferrer">「こころみまもり」シリーズ</a>'
+    )
+  );
+  assert.ok(
+    englishAboutPage.includes(
+      '<a href="products.html" target="_blank" rel="noopener noreferrer">“Kokoro Mimamori” series</a>'
+    )
+  );
 });
 
 test('Contact pages expose the work inquiry category and the backend allows its value', () => {

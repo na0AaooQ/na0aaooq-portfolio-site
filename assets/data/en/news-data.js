@@ -1,5 +1,15 @@
 window.NEWS_ITEMS = [
     {
+        id: "20260819-portfolio-products-update",
+        date: "2026-08-19",
+        title: "We have added a link to the service introduction video under “Gazou Mimamori  to the Products page.",
+        summary: "We have added a link to the service introduction video under “Gazou Mimamori | X Sensitive Image Filter” to the Products page.",
+        url: "/en/news.html#20260819-portfolio-products-update",
+        relatedUrl: "products.html",
+        relatedLabel: "View related page",
+        published: true
+    },
+    {
         id: "20260815-portfolio-products-inquiry-update",
         date: "2026-08-15",
         title: "Updated the “Kokoro Mimamori” introduction and contact options for work and media inquiries",

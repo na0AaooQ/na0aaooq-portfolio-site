@@ -1,10 +1,10 @@
 window.NEWS_ITEMS = [
     {
-        id: "20260819-portfolio-products-update",
-        date: "2026-08-19",
+        id: "20260820-portfolio-products-update",
+        date: "2026-08-20",
         title: "「プロダクト一覧」の「がぞうみまもり」にサービス紹介動画へのリンクを追加しました。",
         summary: "「プロダクト一覧」の「がぞうみまもり | Xセンシティブ画像フィルター」にサービス紹介動画へのリンクを追加しました。",
-        url: "/news.html#20260819-portfolio-products-update",
+        url: "/news.html#20260820-portfolio-products-update",
         relatedUrl: "products.html",
         relatedLabel: "関連ページを見る",
         published: true

@@ -1,10 +1,10 @@
 window.NEWS_ITEMS = [
     {
-        id: "20260820-portfolio-products-update",
-        date: "2026-08-20",
+        id: "20260822-portfolio-products-update",
+        date: "2026-08-22",
         title: "We have added a link to the service introduction video under “Gazou Mimamori  to the Products page.",
         summary: "We have added a link to the service introduction video under “Gazou Mimamori | X Sensitive Image Filter” to the Products page.",
-        url: "/en/news.html#20260820-portfolio-products-update",
+        url: "/en/news.html#20260822-portfolio-products-update",
         relatedUrl: "products.html",
         relatedLabel: "View related page",
         published: true

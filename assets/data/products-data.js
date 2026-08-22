@@ -79,7 +79,7 @@ window.PRODUCT_ITEMS = [
         status: "公開中",
         name: "ことばうけみまもり",
         catch: "Xことばに心のワンクッション",
-        description: "X（旧Twitter）で届く言葉のなかで、人格否定・存在否定・差別的表現・執拗な攻撃など、受け手の心に大きな負荷を与える可能性のある投稿に、そっとワンクッションを置くための補助ツールです。異なる意見や健全な批判を規制することを目的とせず、あなたが大切にしている「つながり」と「対話」を守りながら、心の負担を軽くするプロダクトです。",
+        description: "X（旧Twitter）で届く言葉のなかで、誹謗中傷や罵倒、人格否定・存在否定・差別的表現・執拗な攻撃など、受け手の心に大きな負荷を与える可能性のある投稿・リプライ・引用・リポストに対して、そっとワンクッションを置くためのプロダクトです。異なる意見や健全な批判を規制することを目的とせず、あなたが大切にしている「つながり」と「対話」を守りながら、心の負担を軽くするプロダクトです。",
         detailUrl: "products.html#kotoba-uke-mimamori",
         detailTargetBlank: true,
         infoUrl: "https://na0aaooq.github.io/kotoba-uke-mimamori-for-x/about.html",

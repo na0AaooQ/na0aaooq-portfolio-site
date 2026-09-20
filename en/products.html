@@ -198,6 +198,11 @@
           <p class="products-intro__inquiry">
             I welcome questions about the products, as well as inquiries about work, projects, media coverage, and interviews.
           </p>
+          <p class="products-intro__policy">
+            In addition, “Kokoro Mimamori” is a sole proprietorship based in Japan.<br>
+            We comply with applicable laws and regulations and conduct our business with integrity.<br>
+            We do not maintain relationships or conduct transactions with organized crime groups or other antisocial forces.
+          </p>
           <a href="contact.html" class="button button-primary products-intro__cta">Work &amp; Media Inquiries</a>
         </div>
       </div>
@@ -213,7 +218,25 @@
           </p>
         </div>
 
+        <div id="products-theme-filter" class="products-theme-filter" hidden>
+          <label class="products-theme-filter__label" for="products-theme-select">Filter by theme</label>
+          <select id="products-theme-select" class="products-theme-filter__select" aria-describedby="products-theme-note">
+            <option value="">All themes</option>
+          </select>
+          <div id="products-theme-note" class="products-theme-filter__note">
+            <p>“Themes” are navigation categories designed to help you find products listed on this page.</p>
+            <p>They do not classify or assess individual events or actions from a legal, medical, or sociological perspective.</p>
+          </div>
+          <p id="products-theme-status" class="visually-hidden" role="status" aria-live="polite"></p>
+        </div>
         <div id="products-archive-list" class="product-cards"></div>
+        <div id="products-theme-empty" class="products-theme-empty" hidden>
+          <p>
+            No products currently match this theme.<br>
+            Choose another theme or view all products.
+          </p>
+          <button id="products-theme-reset" class="button button-secondary" type="button">Show all themes</button>
+        </div>
       </div>
     </section>
 
@@ -303,6 +326,7 @@
     </div>
   </footer>
 
+  <script src="../assets/data/product-themes.js"></script>
   <script src="../assets/data/en/products-data.js"></script>
   <script src="../assets/products.js"></script>
   <script src="../assets/js/site-header.js"></script>

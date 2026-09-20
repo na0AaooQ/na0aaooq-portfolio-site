@@ -324,6 +324,141 @@ test('Products pages provide the Kokoro Mimamori explanation and inquiry path be
   );
 });
 
+test('Products pages provide accessible, source-driven theme filtering without adding it to top pages', () => {
+  const japaneseProductsPage = readHtml('products.html');
+  const englishProductsPage = readHtml('en/products.html');
+  const japaneseTopPage = readHtml('index.html');
+  const englishTopPage = readHtml('en/index.html');
+
+  assert.ok(
+    japaneseProductsPage.includes(
+      '<label class="products-theme-filter__label" for="products-theme-select">対応テーマで絞り込む</label>'
+    )
+  );
+  assert.ok(
+    englishProductsPage.includes(
+      '<label class="products-theme-filter__label" for="products-theme-select">Filter by theme</label>'
+    )
+  );
+
+  for (const html of [japaneseProductsPage, englishProductsPage]) {
+    assert.ok(html.includes('id="products-theme-select"'));
+    assert.ok(html.includes('aria-describedby="products-theme-note"'));
+    assert.ok(html.includes('id="products-theme-status" class="visually-hidden" role="status"'));
+    assert.ok(html.includes('id="products-theme-empty" class="products-theme-empty" hidden'));
+    assert.ok(html.includes('id="products-theme-reset"'));
+  }
+
+  assert.ok(
+    japaneseProductsPage.includes(
+      '「対応テーマ」は、このページに掲載している各プロダクトを探しやすくするための案内上の分類です。'
+    )
+  );
+  assert.ok(
+    japaneseProductsPage.includes(
+      '個別の出来事や行為について、法的・医学的・社会学的な分類や判断を行うものではありません。'
+    )
+  );
+  assert.ok(
+    englishProductsPage.includes(
+      '“Themes” are navigation categories designed to help you find products listed on this page.'
+    )
+  );
+  assert.ok(
+    englishProductsPage.includes(
+      'They do not classify or assess individual events or actions from a legal, medical, or sociological perspective.'
+    )
+  );
+
+  assert.ok(
+    japaneseProductsPage.indexOf('assets/data/product-themes.js') <
+      japaneseProductsPage.indexOf('assets/data/products-data.js')
+  );
+  assert.ok(
+    japaneseProductsPage.indexOf('assets/data/products-data.js') <
+      japaneseProductsPage.indexOf('assets/products.js')
+  );
+  assert.ok(
+    englishProductsPage.indexOf('../assets/data/product-themes.js') <
+      englishProductsPage.indexOf('../assets/data/en/products-data.js')
+  );
+  assert.ok(
+    englishProductsPage.indexOf('../assets/data/en/products-data.js') <
+      englishProductsPage.indexOf('../assets/products.js')
+  );
+
+  for (const html of [japaneseTopPage, englishTopPage]) {
+    assert.doesNotMatch(html, /product-themes\.js/);
+    assert.doesNotMatch(html, /products-theme-filter/);
+  }
+});
+
+test('Japanese and English Home, Products, and About pages state the business policies', () => {
+  const japanesePolicy = [
+    '個人事業「こころみまもり」は、日本国内で事業活動を行っています。',
+    '法令を遵守し、誠実かつ適正に活動してまいります。',
+    '反社会的勢力との関係を持たず、取引その他の関与を行いません。'
+  ];
+  const englishPolicy = [
+    '“Kokoro Mimamori” is a sole proprietorship based in Japan.',
+    'We comply with applicable laws and regulations and conduct our business with integrity.',
+    'We do not maintain relationships or conduct transactions with organized crime groups or other antisocial forces.'
+  ];
+
+  for (const pagePath of ['index.html', 'products.html', 'about.html']) {
+    const html = readHtml(pagePath);
+
+    for (const sentence of japanesePolicy) {
+      assert.ok(html.includes(sentence), `${pagePath} should include the Japanese business policy`);
+    }
+  }
+
+  for (const pagePath of ['en/index.html', 'en/products.html', 'en/about.html']) {
+    const html = readHtml(pagePath);
+
+    for (const sentence of englishPolicy) {
+      assert.ok(html.includes(sentence), `${pagePath} should include the English business policy`);
+    }
+  }
+});
+
+test('Products pages place the business policy after inquiry guidance and use compact theme spacing', () => {
+  const japaneseProductsPage = readHtml('products.html');
+  const englishProductsPage = readHtml('en/products.html');
+  const styles = fs.readFileSync(path.join(ROOT_DIR, 'assets/css/style.css'), 'utf8');
+
+  for (const html of [japaneseProductsPage, englishProductsPage]) {
+    assert.ok(html.indexOf('products-intro__about') < html.indexOf('products-intro__inquiry'));
+    assert.ok(html.indexOf('products-intro__inquiry') < html.indexOf('products-intro__policy'));
+  }
+
+  assert.ok(
+    japaneseProductsPage.includes(
+      'なお、個人事業「こころみまもり」は、日本国内で事業活動を行っています。'
+    )
+  );
+  assert.ok(
+    englishProductsPage.includes(
+      'In addition, “Kokoro Mimamori” is a sole proprietorship based in Japan.'
+    )
+  );
+  assert.match(styles, /\.product-card__themes\s*\{[\s\S]*?padding: 0;[\s\S]*?margin-top: 0;/);
+  assert.match(styles, /\.product-card__themes \+ \.card-link\s*\{\s*margin-top: 1em;/);
+  assert.match(
+    styles,
+    /\.products-theme-filter__select\s*\{[\s\S]*?background: var\(--primary-soft\);/
+  );
+  assert.match(
+    styles,
+    /\.products-theme-filter__select\s*\{[\s\S]*?border: 2px solid var\(--primary\);/
+  );
+  assert.match(
+    styles,
+    /\.about-page \.business-info-card \.section-heading p\s*\{[\s\S]*?margin: 14px 0 0;[\s\S]*?text-align: left;/
+  );
+  assert.match(styles, /\.business-info-card \.business-policy\s*\{\s*text-align: left;/);
+});
+
 test('About pages link only the Kokoro Mimamori series name to Products', () => {
   const japaneseAboutPage = readHtml('about.html');
   const englishAboutPage = readHtml('en/about.html');

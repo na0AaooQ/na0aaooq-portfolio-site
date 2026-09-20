@@ -196,6 +196,11 @@
           <p class="products-intro__inquiry">
             プロダクトについてのご質問、お仕事のご依頼、掲載・取材などのご相談を受け付けています。
           </p>
+          <p class="products-intro__policy">
+            なお、個人事業「こころみまもり」は、日本国内で事業活動を行っています。<br>
+            法令を遵守し、誠実かつ適正に活動してまいります。<br>
+            反社会的勢力との関係を持たず、取引その他の関与を行いません。
+          </p>
           <a href="contact.html" class="button button-primary products-intro__cta">お仕事・取材のご相談はこちら</a>
         </div>
       </div>
@@ -210,7 +215,25 @@
           </p>
         </div>
 
+        <div id="products-theme-filter" class="products-theme-filter" hidden>
+          <label class="products-theme-filter__label" for="products-theme-select">対応テーマで絞り込む</label>
+          <select id="products-theme-select" class="products-theme-filter__select" aria-describedby="products-theme-note">
+            <option value="">すべてのテーマ</option>
+          </select>
+          <div id="products-theme-note" class="products-theme-filter__note">
+            <p>「対応テーマ」は、このページに掲載している各プロダクトを探しやすくするための案内上の分類です。</p>
+            <p>個別の出来事や行為について、法的・医学的・社会学的な分類や判断を行うものではありません。</p>
+          </div>
+          <p id="products-theme-status" class="visually-hidden" role="status" aria-live="polite"></p>
+        </div>
         <div id="products-archive-list" class="product-cards"></div>
+        <div id="products-theme-empty" class="products-theme-empty" hidden>
+          <p>
+            このテーマに該当するプロダクトは現在ありません。<br>
+            ほかのテーマを選ぶか、すべてのプロダクトをご覧ください。
+          </p>
+          <button id="products-theme-reset" class="button button-secondary" type="button">すべてのテーマを表示</button>
+        </div>
       </div>
     </section>
 
@@ -409,6 +432,7 @@
       </p>
     </div>
   </footer>
+  <script src="assets/data/product-themes.js"></script>
   <script src="assets/data/products-data.js"></script>
   <script src="assets/products.js"></script>
   <script src="assets/js/site-header.js"></script>

@@ -2,6 +2,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "kotoba-mimamori",
         sortOrder: 10,
+        themes: ["social-posting-safety", "communication-improvement"],
         status: "Available",
         name: "Kotoba Mimamori",
         catch: "Text risk checking service to help prevent harmful SNS posts",
@@ -22,6 +23,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "gazo-mimamori",
         sortOrder: 20,
+        themes: ["sensitive-images", "emotional-support"],
         status: "Available",
         name: "Gazou Mimamori",
         catch: "X Sensitive Image Filter",
@@ -42,6 +44,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "na0AaooQ-portfolio-site",
         sortOrder: 30,
+        themes: ["other"],
         status: "Available",
         name: "Portfolio Website",
         catch: "Portfolio website of Naohisa Aoki (na0AaooQ)",
@@ -59,6 +62,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "youtube-comment-mimamori",
         sortOrder: 45,
+        themes: ["abusive-language", "emotional-support"],
         status: "In Development",
         name: "Comment Mimamori",
         catch: "Streaming comment safety filter",
@@ -79,6 +83,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "kotoba-uke-mimamori",
         sortOrder: 40,
+        themes: ["abusive-language", "emotional-support"],
         status: "Released",
         name: "Kotoba Uke Mimamori",
         catch: "A gentle pause before words on X",
@@ -100,9 +105,10 @@ window.PRODUCT_ITEMS = [
     {
         id: "madoguchi-mimamori",
         sortOrder: 42,
+        themes: ["official-information-access"],
         status: "Available",
         name: "Madoguchi Mimamori",
-        catch: "Official Information Guide for Kumamoto Prefecture and Kumamoto City",
+        catch: "Guide to Official Information from Public Institutions and Related Organizations",
         description: "Madoguchi Mimamori is a guide that helps users find the public institution or related organization responsible for the information they need during disasters and other situations, then continue to that organization's own official announcements. It is not an official government website, breaking-news service, news site, or fact-checking service.",
         detailUrl: "products.html#madoguchi-mimamori",
         infoUrl: "https://madoguchi.kokoromimamori.na0aaooq.com/en/privacy/",
@@ -120,6 +126,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "kotoba-abuse-support",
         sortOrder: 50,
+        themes: ["abusive-language", "emotional-support"],
         status: "Under Consideration",
         name: "Kotoba Mimamori",
         catch: "A system that receives, classifies, organizes, and plans countermeasures against abusive words to protect people’s hearts",
@@ -137,6 +144,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "workplace-1on1-harassment-protect",
         sortOrder: 60,
+        themes: ["harassment", "abusive-language"],
         status: "Under Consideration",
         name: "Workplace Mimamori",
         catch: "Preventing harassment and aggressive behavior in 1-on-1 meetings and closed-room workplace discussions",
@@ -154,6 +162,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "inquiry-mimamori",
         sortOrder: 70,
+        themes: ["harassment", "abusive-language", "emotional-support"],
         status: "Under Consideration",
         name: "Inquiry Mimamori",
         catch: "By streamlining the customer service process, we aim to alleviate mental stress and protect our customers from aggressive language and customer harassment contained within inquiries.",
@@ -171,6 +180,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "goiken-mimamori",
         sortOrder: 80,
+        themes: ["abusive-language", "communication-improvement"],
         status: "Under Consideration",
         name: "Goiken Mimamori",
         catch: "A service that translates the essence and underlying sentiments of slanderous or aggressive behavior into constructive opinions and proposals, conveys them to the appropriate channels—rather than engaging in personal attacks—and monitors the outcome.",
@@ -188,6 +198,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "workplace-various-harassment-protect",
         sortOrder: 90,
+        themes: ["harassment", "abusive-language"],
         status: "Under Consideration",
         name: "Workplace Mimamori",
         catch: "Preventing workplace harassment, including power harassment, sexual harassment, maternity harassment, and aggressive behavior",
@@ -205,6 +216,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "kotoba-business-pressure",
         sortOrder: 100,
+        themes: ["harassment", "abusive-language"],
         status: "Under Consideration",
         name: "Kotoba Mimamori",
         catch: "Preventing aggressive behavior based on superior positions in work or business relationships",
@@ -222,6 +234,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "kotoba-school-bullying",
         sortOrder: 110,
+        themes: ["bullying-group-attacks", "abusive-language"],
         status: "Under Consideration",
         name: "Kotoba Mimamori",
         catch: "Preventing bullying and aggressive behavior in schools",
@@ -239,6 +252,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "kotoba-community-attack",
         sortOrder: 120,
+        themes: ["bullying-group-attacks", "abusive-language"],
         status: "Under Consideration",
         name: "Kotoba Mimamori",
         catch: "Preventing aggressive behavior by multiple people toward one person within various communities",
@@ -256,6 +270,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "kotoba-structure-analysis",
         sortOrder: 130,
+        themes: ["analysis-visualization", "communication-improvement"],
         status: "Under Consideration",
         name: "Kotoba Mimamori",
         catch: "Analyzing and visualizing word tendencies to reveal the causes and structures behind harmful communication",
@@ -273,6 +288,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "kokoro-mental-visualization",
         sortOrder: 140,
+        themes: ["analysis-visualization", "emotional-support"],
         status: "Under Consideration",
         name: "Kokoro Mimamori",
         catch: "Visualizing psychological damage caused by words and communication",
@@ -290,6 +306,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "kokoro-support-service",
         sortOrder: 150,
+        themes: ["emotional-support"],
         status: "Under Consideration",
         name: "Kokoro Mimamori",
         catch: "A service that gently supports people whose hearts have been hurt by careless words or communication",
@@ -307,6 +324,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "kokoro-training-program",
         sortOrder: 160,
+        themes: ["communication-improvement"],
         status: "Under Consideration",
         name: "Kokoro Mimamori",
         catch: "A training program for people who use aggressive language, helping them learn empathy and consideration for others together with the developer",
@@ -324,6 +342,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "kokoro-management-report",
         sortOrder: 170,
+        themes: ["analysis-visualization", "communication-improvement"],
         status: "Under Consideration",
         name: "Kokoro Mimamori",
         catch: "Providing improvement reports and plans for executives and managers on management and reputation risks caused by communication issues",
@@ -341,6 +360,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "kokoro-society-report",
         sortOrder: 180,
+        themes: [],
         status: "Under Consideration",
         name: "Kokoro Mimamori",
         catch: "Providing improvement reports and plans for society and political leaders on risks that words and communication may pose to public life and governance",

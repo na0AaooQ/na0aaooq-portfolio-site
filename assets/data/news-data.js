@@ -1,5 +1,15 @@
 window.NEWS_ITEMS = [
     {
+        id: "20260920-portfolio-products-and-business-policy-update",
+        date: "2026-09-20",
+        title: "「プロダクト一覧」に対応テーマによる絞り込みを追加し、事業姿勢と掲載情報を更新しました",
+        summary: "ポートフォリオサイトを更新し、「プロダクト一覧」に各プロダクトを対応テーマから探せる絞り込み機能を追加しました。あわせて、トップページ・「プロダクト一覧」・「開発者について」に、個人事業「こころみまもり」の法令遵守および反社会的勢力との関係を持たない事業姿勢を明記しました。また、「まどぐちみまもり」の掲載情報と紹介画像を現在の内容に更新しました。",
+        url: "/news.html#20260920-portfolio-products-and-business-policy-update",
+        relatedUrl: "products.html",
+        relatedLabel: "関連ページを見る",
+        published: true
+    },
+    {
         id: "20260822-portfolio-products-update",
         date: "2026-08-22",
         title: "「プロダクト一覧」の「がぞうみまもり」にサービス紹介動画へのリンクを追加しました。",

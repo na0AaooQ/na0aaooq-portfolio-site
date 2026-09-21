@@ -2,6 +2,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "kotoba-mimamori",
         sortOrder: 10,
+        themes: ["social-posting-safety", "communication-improvement"],
         status: "公開中",
         name: "ことばみまもり",
         catch: "SNS投稿前の炎上防止・文章リスク確認サービス",
@@ -22,6 +23,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "gazo-mimamori",
         sortOrder: 20,
+        themes: ["sensitive-images", "emotional-support"],
         status: "公開中",
         name: "がぞうみまもり",
         catch: "Xセンシティブ画像フィルター",
@@ -42,6 +44,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "na0AaooQ-portfolio-site",
         sortOrder: 30,
+        themes: ["other"],
         status: "公開中",
         name: "ポートフォリオサイト",
         catch: "青木直之(na0AaooQ)のポートフォリオサイト",
@@ -56,6 +59,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "youtube-comment-mimamori",
         sortOrder: 45,
+        themes: ["abusive-language", "emotional-support"],
         status: "開発中",
         name: "こめんとみまもり",
         catch: "配信コメント安心フィルター",
@@ -76,6 +80,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "kotoba-uke-mimamori",
         sortOrder: 40,
+        themes: ["abusive-language", "emotional-support"],
         status: "公開中",
         name: "ことばうけみまもり",
         catch: "Xことばに心のワンクッション",
@@ -97,9 +102,10 @@ window.PRODUCT_ITEMS = [
     {
         id: "madoguchi-mimamori",
         sortOrder: 42,
+        themes: ["official-information-access"],
         status: "公開中",
         name: "まどぐちみまもり",
-        catch: "熊本県・熊本市の公式情報案内",
+        catch: "公的機関・関係団体の公式情報案内",
         description: "「まどぐちみまもり」は、災害時などに確認したい内容から担当する公的機関・関係団体を見つけ、その団体自身の公式発表へ進むための案内サイトです。行政機関が運営する公式サイト、速報サイト、情報の真偽判定サービスではありません。",
         detailUrl: "products.html#madoguchi-mimamori",
         infoUrl: "https://madoguchi.kokoromimamori.na0aaooq.com/ja/privacy/",
@@ -117,6 +123,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "kotoba-abuse-support",
         sortOrder: 50,
+        themes: ["abusive-language", "emotional-support"],
         status: "検討中",
         name: "ことばみまもり",
         catch: "誹謗中傷をシステムが受け止め、分類・整理・対策を立案し、誹謗中傷から人の心を守る",
@@ -131,6 +138,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "workplace-1on1-harassment-protect",
         sortOrder: 60,
+        themes: ["harassment", "abusive-language"],
         status: "検討中",
         name: "しょくばみまもり",
         catch: "1on1ミーティングや密室会議における、パワハラ・セクハラ・マタハラ等のハラスメント、攻撃的言動を防止する",
@@ -145,6 +153,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "inquiry-mimamori",
         sortOrder: 70,
+        themes: ["harassment", "abusive-language", "emotional-support"],
         status: "検討中",
         name: "おといあわせみまもり",
         catch: "お問い合わせ対応の業務効率化による心的負担の緩和、お問い合わせの中に含まれる攻撃的言動やカスタマーハラスメントから心を守る",
@@ -159,6 +168,7 @@ window.PRODUCT_ITEMS = [
     {   
         id: "goiken-mimamori",
         sortOrder: 80,
+        themes: ["abusive-language", "communication-improvement"],
         status: "検討中",
         name: "ごいけんみまもり",
         catch: "誹謗中傷や攻撃的な言動の本質、根底にある思いについて、建設的な意見・提案として表現し、個人攻撃ではなく適切な窓口へ伝え、結果を見守るサービス",
@@ -173,6 +183,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "workplace-various-harassment-protect",
         sortOrder: 90,
+        themes: ["harassment", "abusive-language"],
         status: "検討中",
         name: "しょくばみまもり",
         catch: "職場のパワハラ・セクハラ・マタハラ等のハラスメント、攻撃的言動を防止する",
@@ -187,6 +198,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "kotoba-business-pressure",
         sortOrder: 100,
+        themes: ["harassment", "abusive-language"],
         status: "検討中",
         name: "ことばみまもり",
         catch: "仕事や取引関係における優越的立場を背景とした、攻撃的言動を防止する",
@@ -201,6 +213,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "kotoba-school-bullying",
         sortOrder: 110,
+        themes: ["bullying-group-attacks", "abusive-language"],
         status: "検討中",
         name: "ことばみまもり",
         catch: "学校内のいじめや攻撃的言動を防止する",
@@ -215,6 +228,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "kotoba-community-attack",
         sortOrder: 120,
+        themes: ["bullying-group-attacks", "abusive-language"],
         status: "検討中",
         name: "ことばみまもり",
         catch: "さまざまなコミュニティ内における、複数人から一人に対する攻撃的言動を防止する",
@@ -229,6 +243,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "kotoba-structure-analysis",
         sortOrder: 130,
+        themes: ["analysis-visualization", "communication-improvement"],
         status: "検討中",
         name: "ことばみまもり",
         catch: "言葉の傾向を分析・可視化し、言葉の発生原因と構造を可視化する",
@@ -243,6 +258,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "kokoro-mental-visualization",
         sortOrder: 140,
+        themes: ["analysis-visualization", "emotional-support"],
         status: "検討中",
         name: "こころみまもり",
         catch: "言葉やコミュニケーションによる、心理的なダメージを可視化する",
@@ -257,6 +273,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "kokoro-support-service",
         sortOrder: 150,
+        themes: ["emotional-support"],
         status: "検討中",
         name: "こころみまもり",
         catch: "心無い言葉やコミュニケーションで心が傷ついてしまった方へ、寄り添い、支えるサービス",
@@ -271,6 +288,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "kokoro-training-program",
         sortOrder: 160,
+        themes: ["communication-improvement"],
         status: "検討中",
         name: "こころみまもり",
         catch: "攻撃的言動をする方に向けて、心・技・体を開発者とともに鍛え、人の痛みや心を慮ることを、一緒に学んでいただく鍛錬プログラム",
@@ -285,6 +303,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "kokoro-management-report",
         sortOrder: 170,
+        themes: ["analysis-visualization", "communication-improvement"],
         status: "検討中",
         name: "こころみまもり",
         catch: "経営者・管理職等のみなさまに向けて、言葉やコミニュケーションのリスクによる、経営リスクやレビテーションリスク等、改善レポートと改善計画を提供する",
@@ -299,6 +318,7 @@ window.PRODUCT_ITEMS = [
     {
         id: "kokoro-society-report",
         sortOrder: 180,
+        themes: [],
         status: "検討中",
         name: "こころみまもり",
         catch: "社会・政治家のみなさまに向けて、言葉やコミュニケーションのリスクによる、国政や国民生活に与えるリスク、改善レポートと改善計画を提供する",

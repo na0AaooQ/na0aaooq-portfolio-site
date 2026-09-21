@@ -395,12 +395,10 @@ test('Products pages provide accessible, source-driven theme filtering without a
 
 test('Japanese and English Home, Products, and About pages state the business policies', () => {
   const japanesePolicy = [
-    '個人事業「こころみまもり」は、日本国内で事業活動を行っています。',
     '法令を遵守し、誠実かつ適正に活動してまいります。',
     '反社会的勢力との関係を持たず、取引その他の関与を行いません。'
   ];
   const englishPolicy = [
-    '“Kokoro Mimamori” is a sole proprietorship based in Japan.',
     'We comply with applicable laws and regulations and conduct our business with integrity.',
     'We do not maintain relationships or conduct transactions with organized crime groups or other antisocial forces.'
   ];
@@ -420,6 +418,17 @@ test('Japanese and English Home, Products, and About pages state the business po
       assert.ok(html.includes(sentence), `${pagePath} should include the English business policy`);
     }
   }
+
+  assert.ok(
+    readHtml('index.html').includes(
+      'なお、「こころみまもり」シリーズの開発と運営元、個人事業主(屋号: こころみまもり)は、日本国内で事業活動を行っています。'
+    )
+  );
+  assert.ok(
+    readHtml('en/index.html').includes(
+      'Additionally, the “Kokoro Mimamori” series is developed and operated by a sole proprietorship (business name: Kokoro Mimamori) based in Japan.'
+    )
+  );
 });
 
 test('Products pages place the business policy after inquiry guidance and use compact theme spacing', () => {

@@ -1,10 +1,10 @@
 window.NEWS_ITEMS = [
     {
-        id: "20260920-portfolio-products-and-business-policy-update",
-        date: "2026-09-20",
+        id: "20260921-portfolio-products-and-business-policy-update",
+        date: "2026-09-21",
         title: "Added theme filtering to the Products page and updated business policies and product information",
         summary: "The portfolio website has been updated with a theme filter on the Products page to help visitors find relevant products more easily. The Home, Products, and About pages now also state the business policies of the “Kokoro Mimamori” sole proprietorship, including compliance with applicable laws and regulations and no relationships or transactions with organized crime groups or other antisocial forces. In addition, the listing information and introduction image for Madoguchi Mimamori have been updated to reflect its current scope.",
-        url: "/en/news.html#20260920-portfolio-products-and-business-policy-update",
+        url: "/en/news.html#20260921-portfolio-products-and-business-policy-update",
         relatedUrl: "products.html",
         relatedLabel: "View related page",
         published: true

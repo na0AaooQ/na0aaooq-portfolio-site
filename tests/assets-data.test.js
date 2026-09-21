@@ -258,35 +258,35 @@ test('English news data has required fields and local references', () => {
   assertNewsItems(newsItems);
 });
 
-test('Japanese and English news data include the 2026-09-20 product and business policy update', () => {
+test('Japanese and English news data include the 2026-09-21 product and business policy update', () => {
   const japaneseNews = loadWindowArray('assets/data/news-data.js', 'NEWS_ITEMS');
   const englishNews = loadWindowArray('assets/data/en/news-data.js', 'NEWS_ITEMS');
   const japaneseUpdate = japaneseNews.find(
-    (item) => item.id === '20260920-portfolio-products-and-business-policy-update'
+    (item) => item.id === '20260921-portfolio-products-and-business-policy-update'
   );
   const englishUpdate = englishNews.find(
-    (item) => item.id === '20260920-portfolio-products-and-business-policy-update'
+    (item) => item.id === '20260921-portfolio-products-and-business-policy-update'
   );
 
   assert.deepEqual(JSON.parse(JSON.stringify(japaneseUpdate)), {
-    id: '20260920-portfolio-products-and-business-policy-update',
-    date: '2026-09-20',
+    id: '20260921-portfolio-products-and-business-policy-update',
+    date: '2026-09-21',
     title: '「プロダクト一覧」に対応テーマによる絞り込みを追加し、事業姿勢と掲載情報を更新しました',
     summary:
       'ポートフォリオサイトを更新し、「プロダクト一覧」に各プロダクトを対応テーマから探せる絞り込み機能を追加しました。あわせて、トップページ・「プロダクト一覧」・「開発者について」に、個人事業「こころみまもり」の法令遵守および反社会的勢力との関係を持たない事業姿勢を明記しました。また、「まどぐちみまもり」の掲載情報と紹介画像を現在の内容に更新しました。',
-    url: '/news.html#20260920-portfolio-products-and-business-policy-update',
+    url: '/news.html#20260921-portfolio-products-and-business-policy-update',
     relatedUrl: 'products.html',
     relatedLabel: '関連ページを見る',
     published: true
   });
   assert.deepEqual(JSON.parse(JSON.stringify(englishUpdate)), {
-    id: '20260920-portfolio-products-and-business-policy-update',
-    date: '2026-09-20',
+    id: '20260921-portfolio-products-and-business-policy-update',
+    date: '2026-09-21',
     title:
       'Added theme filtering to the Products page and updated business policies and product information',
     summary:
       'The portfolio website has been updated with a theme filter on the Products page to help visitors find relevant products more easily. The Home, Products, and About pages now also state the business policies of the “Kokoro Mimamori” sole proprietorship, including compliance with applicable laws and regulations and no relationships or transactions with organized crime groups or other antisocial forces. In addition, the listing information and introduction image for Madoguchi Mimamori have been updated to reflect its current scope.',
-    url: '/en/news.html#20260920-portfolio-products-and-business-policy-update',
+    url: '/en/news.html#20260921-portfolio-products-and-business-policy-update',
     relatedUrl: 'products.html',
     relatedLabel: 'View related page',
     published: true

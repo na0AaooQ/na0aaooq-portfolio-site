@@ -799,6 +799,12 @@ section {
   overflow-wrap: break-word;
 }
 
+@media (min-width: 769px) {
+  .page-hero .page-title--privacy {
+    max-width: 100%;
+  }
+}
+
 .page-hero p,
 .page-hero__description {
   max-width: 42rem;
@@ -1333,6 +1339,21 @@ section {
 .legal-blocks {
   display: grid;
   gap: 20px;
+}
+
+.legal-card__updated {
+  display: inline-block;
+  max-width: 100%;
+  margin: 0 0 20px;
+  padding: 6px 12px;
+  color: var(--primary-strong);
+  background: var(--surface-accent);
+  border: 1px solid var(--line-accent);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.6;
+  overflow-wrap: break-word;
 }
 
 .legal-card h2 {

@@ -443,7 +443,7 @@ test('Products pages place the business policy after inquiry guidance and use co
 
   assert.ok(
     japaneseProductsPage.includes(
-      'なお、個人事業「こころみまもり」は、日本国内で事業活動を行っています。'
+      'なお、個人事業「こころみまもり」は、日本国内で事業活動を行っております。'
     )
   );
   assert.ok(
@@ -506,4 +506,82 @@ test('Contact pages expose the work inquiry category and the backend allows its 
     lambdaSource,
     /ALLOWED_CATEGORIES = \{"service", "product", "media", "work", "other"\}/
   );
+});
+
+for (const page of [
+  {
+    path: 'privacy.html',
+    updated: '最終更新日：2026年8月',
+    month: '2026年8月',
+    heading: '基本方針'
+  },
+  {
+    path: 'en/privacy.html',
+    updated: 'Last updated: August 2026',
+    month: 'August 2026',
+    heading: '1. Basic Policy'
+  }
+]) {
+  test(`${page.path} shows the fixed policy update month before the first card heading`, () => {
+    const html = readHtml(page.path);
+    const firstCard = /<article class="card legal-card">([\s\S]*?)<\/article>/.exec(html);
+    const labels = [...html.matchAll(/<p class="legal-card__updated">([\s\S]*?)<\/p>/g)];
+
+    assert.ok(firstCard, `${page.path} should include a policy card`);
+    assert.equal(labels.length, 1, `${page.path} should include exactly one update label`);
+    assert.equal(labels[0][1].replace(/<[^>]*>/g, '').trim(), page.updated);
+    assert.ok(labels[0][1].includes(`<time datetime="2026-08">${page.month}</time>`));
+    assert.match(
+      firstCard[1],
+      /^\s*<p class="legal-card__updated">[\s\S]*?<\/p>\s*<h2>/,
+      'the update label should be the first content before the existing heading'
+    );
+    assert.ok(firstCard[1].includes(labels[0][0]));
+    assert.ok(firstCard[1].includes(`<h2>${page.heading}</h2>`));
+  });
+}
+
+test('Products introduction paragraphs use the agreed Japanese and English wording', () => {
+  const pages = [
+    {
+      path: 'products.html',
+      paragraphs: {
+        'products-intro__about':
+          '「こころみまもり」で目指している世界や未来、取り組みに込めた考えについては、「開発者について」ページでご紹介しております。',
+        'products-intro__inquiry':
+          'プロダクトについてのお問い合わせやご質問、お仕事のご依頼、掲載・取材などのご相談を受け付けております。 何かございましたら、お気軽にお問い合わせください。',
+        'products-intro__policy':
+          'なお、個人事業「こころみまもり」は、日本国内で事業活動を行っております。 法令を遵守し、誠実かつ適正に活動してまいります。 反社会的勢力との関係を持たず、取引その他の関与を行いません。'
+      }
+    },
+    {
+      path: 'en/products.html',
+      paragraphs: {
+        'products-intro__about':
+          'Learn more about the vision, future, and ideas behind “Kokoro Mimamori” on the About page.',
+        'products-intro__inquiry':
+          'I welcome inquiries and questions about the products, requests for work or projects, and inquiries about media coverage and interviews. Please feel free to contact me.',
+        'products-intro__policy':
+          'In addition, “Kokoro Mimamori” is a sole proprietorship based in Japan. We comply with applicable laws and regulations and conduct our business with integrity. We do not maintain relationships or conduct transactions with organized crime groups or other antisocial forces.'
+      }
+    }
+  ];
+
+  for (const page of pages) {
+    const html = readHtml(page.path);
+
+    for (const [className, expectedText] of Object.entries(page.paragraphs)) {
+      const pattern = new RegExp(`<p class="${className}">([\\s\\S]*?)<\\/p>`);
+      const paragraphs = [...html.matchAll(new RegExp(pattern, 'g'))];
+
+      assert.equal(paragraphs.length, 1, `${page.path} should keep one ${className} paragraph`);
+      const text = paragraphs[0][1]
+        .replace(/<br\s*\/?>/gi, ' ')
+        .replace(/<[^>]*>/g, '')
+        .replace(/\s+/g, ' ')
+        .trim();
+
+      assert.equal(text, expectedText, `${page.path} should use the agreed ${className} text`);
+    }
+  }
 });

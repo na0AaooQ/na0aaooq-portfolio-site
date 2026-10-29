@@ -800,7 +800,8 @@ section {
 }
 
 @media (min-width: 769px) {
-  .page-hero .page-title--privacy {
+  .page-hero .page-title--privacy,
+  .page-hero .page-title--notfound {
     max-width: 100%;
   }
 }

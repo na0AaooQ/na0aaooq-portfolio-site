@@ -143,6 +143,26 @@ test('HTML local links and asset references point to existing files', () => {
   }
 });
 
+test('404 page assets and navigation resolve consistently at any requested depth', () => {
+  const html = fs.readFileSync(path.join(ROOT_DIR, '404.html'), 'utf8');
+  const references = [...getAttributeValues(html, 'href'), ...getAttributeValues(html, 'src')];
+  const requestedPaths = ['/en/404.html', '/missing/deep/page.html', '/missing/deep/'];
+
+  for (const reference of references) {
+    const expectedUrl = new URL(reference, `${SITE_ORIGIN}/404.html`);
+
+    for (const requestedPath of requestedPaths) {
+      const actualUrl = new URL(reference, `${SITE_ORIGIN}${requestedPath}`);
+
+      assert.equal(
+        actualUrl.href,
+        expectedUrl.href,
+        `${requestedPath} should resolve ${reference} to ${expectedUrl.href}`
+      );
+    }
+  }
+});
+
 test('robots.txt and sitemap.xml exist', () => {
   assert.ok(fs.existsSync(path.join(ROOT_DIR, 'robots.txt')), 'robots.txt should exist');
   assert.ok(fs.existsSync(path.join(ROOT_DIR, 'sitemap.xml')), 'sitemap.xml should exist');
